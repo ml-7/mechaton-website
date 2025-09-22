@@ -13,20 +13,26 @@ const EditionsPage = () => (
     <Header />
     <main>
       {/* Page Header */}
-
-      {/* Top Title */}
       <section className="page-header">
         <div className="container">
           <h1>Edycje konkursu</h1>
         </div>
       </section>
 
+      {/* Upcoming Edition Callout - now below the red title box */}
+  <section className="upcoming-edition-callout" style={{background:'#fff', boxShadow:'0 2px 12px #0001', margin:'32px auto 0 auto', maxWidth:'1000px', width:'100%', padding:'32px 24px', display:'flex', flexDirection:'column', alignItems:'center', gap:'18px', justifyContent:'center'}}>
+        <div style={{fontSize:'1.5rem', fontWeight:700, color:'#630102', textAlign:'center'}}>Nadchodzi nowa edycja Mechaton!</div>
+        <div style={{fontSize:'1.1rem', color:'#222', textAlign:'center', marginBottom:'8px'}}>Zgłoś swój zespół do udziału w najbliższej edycji konkursu Mechaton.<br/>Nie przegap szansy na udział!</div>
+        <a href="https://forms.gle/your-registration-form-link" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none'}}>
+          <button style={{background:'#630102', color:'#fff', fontWeight:600, fontSize:'1.1rem', border:'none', borderRadius:'8px', padding:'12px 32px', cursor:'pointer', boxShadow:'0 1px 6px #0002', transition:'background 0.2s'}} onMouseOver={e => e.currentTarget.style.background='#8a1a1a'} onMouseOut={e => e.currentTarget.style.background='#630102'}>
+            Zarejestruj zespół
+          </button>
+        </a>
+      </section>
       {/* Mechaton Edition Boxes */}
-
-      <section className="section">
-        <div className="container">
-          {/* III edycja - COMMON S.A. */}
-          <div className="edition-card">
+  <section className="section" style={{display:'flex', flexDirection:'column', alignItems:'center', marginBottom:'64px', width:'100%'}}>
+        {/* III edycja - COMMON S.A. */}
+        <div className="edition-card" style={{width:'100%', maxWidth:'1200px'}}>
             <div className="edition-image" style={{background:'#fff', display:'flex', alignItems:'center', justifyContent:'center', padding:'0 1em', height:'300px'}}>
               <div style={{flex:'1 1 0', display:'flex', alignItems:'center', justifyContent:'center', height:'100%'}}>
                 <img src={commonLogo} alt="COMMON S.A. logo" style={{maxHeight:'200px', maxWidth:'95%', objectFit:'contain', background:'#fff', borderRadius:'12px', boxShadow:'none'}} />
@@ -56,8 +62,8 @@ const EditionsPage = () => (
             </div>
           </div>
 
-          {/* II edycja - SECO/WARWICK */}
-          <div className="edition-card">
+        {/* II edycja - SECO/WARWICK */}
+        <div className="edition-card" style={{width:'100%', maxWidth:'1200px'}}>
             <div className="edition-image" style={{background:'#fff', display:'flex', alignItems:'center', justifyContent:'center', padding:'0 1em', height:'300px'}}>
               <div style={{flex:'1 1 0', display:'flex', alignItems:'center', justifyContent:'center', height:'100%'}}>
                 <img src={secowarwickLogo} alt="SECO/WARWICK logo" style={{maxHeight:'70px', maxWidth:'95%', objectFit:'contain', background:'#fff', borderRadius:'12px', boxShadow:'none'}} />
@@ -86,8 +92,8 @@ const EditionsPage = () => (
             </div>
           </div>
 
-          {/* I edycja - VEOLIA */}
-          <div className="edition-card">
+        {/* I edycja - VEOLIA */}
+        <div className="edition-card" style={{width:'100%', maxWidth:'1200px'}}>
             <div className="edition-image" style={{background:'#fff', display:'flex', alignItems:'center', justifyContent:'center', padding:'0 1em', height:'300px'}}>
               <div style={{flex:'1 1 0', display:'flex', alignItems:'center', justifyContent:'center', height:'100%'}}>
                 <img src={veoliaLogo} alt="VEOLIA logo" style={{maxHeight:'200px', maxWidth:'95%', objectFit:'contain', background:'#fff', borderRadius:'12px', boxShadow:'none'}} />
@@ -115,7 +121,6 @@ const EditionsPage = () => (
               </div>
             </div>
           </div>
-        </div>
       </section>
 
 

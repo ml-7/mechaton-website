@@ -14,15 +14,14 @@ const Footer = () => (
           <ul className="footer-links">
             <li><a href="/edycje">Edycje</a></li>
             <li><a href="/wspolpraca">Współpraca</a></li>
-            <li><a href="/regulamin/REGULAMIN_MECHATON.pdf" target="_blank" rel="noopener noreferrer">Regulamin</a></li>
+            <li><a href="../src/assets/regulamin/REGULAMIN_MECHATON.pdf" target="_blank" rel="noopener noreferrer">Regulamin</a></li>
           </ul>
         </div>
         <div className="footer-column">
           <h3>Kontakt</h3>
           <ul className="footer-links">
             <li>Email: mechaton@info.p.lodz.pl</li>
-            <li>Telefon: +48 123 456 789</li>
-            <li>Adres: ul. Stefanowskiego 1/15, 90-537 Łódź</li>
+            <li>Adres: ul. Stefanowskiego 1/15,<br />90-537 Łódź</li>
           </ul>
         </div>
         <div className="footer-column">
