@@ -421,7 +421,7 @@ const HomePage = () => {
             <div className="feature-card">
               <div className="feature-icon"></div>
               <h3>Kontakty branżowe</h3>
-              <p>Nawiązanie cennych kontaktów z przedstawicielami przemysłu, potencjalnymi pracodawcami i innymi pasjonatami inżynierii.</p>
+              <p>Nawiązanie cennych kontaktów z&nbsp;przedstawicielami przemysłu, potencjalnymi pracodawcami i innymi pasjonatami inżynierii.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon"></div>

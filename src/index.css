@@ -682,14 +682,24 @@ nav {
 
 .feature-card {
     background-color: white;
-    border-radius: 8px;
-    padding: 30px;
+    border-radius: 12px;
+    padding: 48px 36px;
+    min-height: 220px;
+    min-width: 340px;
+    max-width: 420px;
+    width: 100%;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s cubic-bezier(.4,2,.6,1), border-color 0.3s;
+    color: #2a2a2a;
+    border: 2px solid transparent;
+    will-change: transform;
 }
 
 .feature-card:hover {
-    transform: translateY(-5px);
+    transform: translateZ(0) scale(1.03);
+    box-shadow: 0 8px 24px rgba(99,1,2,0.15);
+    border-color: var(--primary);
+    cursor: pointer;
 }
 
 .feature-icon {
@@ -699,8 +709,20 @@ nav {
 }
 
 .feature-card h3 {
-    margin-bottom: 15px;
-    font-size: 1.5rem;
+    margin-bottom: 22px;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1a0000;
+    text-shadow: 0 1px 4px rgba(99,1,2,0.08);
+}
+
+.feature-card p {
+    font-size: 1.18rem;
+    font-weight: 500;
+    color: #333;
+    text-shadow: 0 1px 4px rgba(99,1,2,0.05);
+    line-height: 1.7;
+    text-align: justify;
 }
 
 /* History Section */
