@@ -8,6 +8,7 @@ import veoliaMechaton from '../assets/veolia-mechaton.jpg';
 import oldTv from '../assets/old_tv_no_bg.png';
 import circleArrow from '../assets/circle-arrow-icon.jpg';
 import meshVideo from '../assets/mesh.mp4';
+import livingRoom from '../assets/livingroom.png';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import RegistrationForm from '../components/RegistrationForm';
@@ -39,38 +40,87 @@ const EditionsPage = () => {
     <>
       <Header />
       <RegistrationForm open={formOpen} onClose={() => setFormOpen(false)} />
-        <main style={{marginTop: '-50px'}}>
+      <main style={{marginTop: '-50px'}}>
       {/* Page Header */}
-      <section className="page-header">
-        <div className="container" style={{display:'flex', flexDirection:'row', alignItems:'center', gap:'32px', justifyContent:'center', flexWrap:'wrap'}}>
+      <section className="page-header" style={{position:'relative', overflow:'visible'}}>
+        {/* Living Room image as background */}
+        <img src={livingRoom} alt="Living Room" style={{
+          position:'absolute',
+          top: '-360px',
+          left:'50%',
+          transform:'translateX(-50%)',
+          width:'110%',
+          maxWidth:'2000px',
+          height:'auto',
+          zIndex:1,
+          opacity:0.9,
+          pointerEvents:'none',
+          objectFit:'cover',
+          filter:'brightness(0.88) blur(0.1px)'
+        }} />
+        <div className="container" style={{display:'flex', flexDirection:'row', alignItems:'center', gap:'32px', justifyContent:'center', flexWrap:'wrap', position:'relative', zIndex:2}}>
           <div
             ref={splineRef}
-            style={{flex:'1 1 800px', minWidth:'620px', maxWidth:'1600px', height:'800px', display:'flex', alignItems:'center', justifyContent:'center', position:'relative', marginLeft:'-20px'}}
+            style={{
+              flex:'1 1 800px',
+              minWidth:'620px',
+              maxWidth:'1600px',
+              height:'600px',
+              display:'flex',
+              alignItems:'flex-end',
+              justifyContent:'flex-start',
+              position:'relative',
+              marginLeft:'350px',
+              marginBottom:'0px',
+              marginTop:'-10px', // move model higher
+            }}
           >
             {/* Splash video overlay */}
             {showSplash && (
               <div style={{
                 position:'absolute',
                 zIndex:10,
-                top:140,
-                left:50,
+                bottom:10,
+                left:20,
                 background:'#000',
-                width:'80%',
-                height:'60%',
+                width:'40%',
+                height:'42%',
                 display:'flex',
                 alignItems:'center',
                 justifyContent:'center',
                 opacity: fadeSplash ? 0 : 1,
-                transition: 'opacity 0.6s ease'
+                transition: 'opacity 0.6s ease',
+                borderRadius:'18px',
+                overflow:'hidden',
               }}>
                 <video src={meshVideo} autoPlay muted playsInline style={{width:'100%', height:'100%', objectFit:'cover'}} />
               </div>
             )}
-            <div style={{width:'100%', height:'100%', display:'flex', alignItems:'center', justifyContent:'center', transform:'scale(0.7)', transformOrigin:'center', marginLeft:'-100px'}}>
+            <div style={{
+              width:'80%',
+              height:'86%',
+              display:'flex',
+              alignItems:'center',
+              justifyContent:'center',
+              transform:'scale(0.55)',
+              transformOrigin:'bottom left',
+              marginLeft:'0',
+              marginBottom:'-11px',
+            }}>
               <iframe frameBorder="0" src="https://my.spline.design/mechanism-8E3rWLDN8xWbn5XZ5yG7oNU0/" width="100%" height="100%" style={{borderRadius:'18px', background:'#fff', border:'none', outline:'none', boxShadow:'none'}} allowFullScreen></iframe>
             </div>
             {/* Old TV overlay - always in front of splash */}
-            <img src={oldTv} alt="old tv" style={{position:'absolute', zIndex: 20, width:'200%', maxWidth:'1300px', pointerEvents:'none', left:'50%', transform:'translate(-50%, 1%)', transformOrigin:'center'}} />
+            <img src={oldTv} alt="old tv" style={{
+              position:'absolute',
+              zIndex: 20,
+              width:'120%',
+              maxWidth:'700px',
+              pointerEvents:'none',
+              left:'-15%',
+              bottom:'-38%',
+              transform:'none',
+              transformOrigin:'bottom left',
+            }} />
 
             {/* Turnable arrow indicator (appears after 8s) */}
             <style>{`
@@ -96,10 +146,9 @@ const EditionsPage = () => {
             <div
               style={{
                 position: 'absolute',
-                left: '44.5%',
-                top: '71%',
-                transform: 'translate(-50%, 0)',
-                zIndex: 30,
+                left: '172px',
+                bottom: '20px',
+                zIndex: 20,
                 display: showArrow ? 'flex' : 'none',
                 alignItems: 'center',
                 pointerEvents: 'none',
@@ -109,16 +158,27 @@ const EditionsPage = () => {
                 src={circleArrow}
                 alt="turnable arrow"
                 className={`spin-return-anim arrow-fade-in${showArrow ? ' visible' : ''}`}
-                style={{width:'40px', height:'40px', objectFit:'contain', opacity:0.92, filter:'drop-shadow(0 2px 6px #0002)'}}
+                style={{width:'20px', height:'20px', objectFit:'contain', opacity:0.92, filter:'drop-shadow(0 2px 6px #0002)'}}
               />
             </div>
           </div>
-          <div style={{flex:'0 0 320px', minWidth:'260px', display:'flex', alignItems:'center', justifyContent:'center'}}>
-            <h1 style={{margin:0, color:'#111', fontSize:'3.2rem', fontWeight:800, textAlign:'center', letterSpacing:'-1px'}}>Edycje konkursu</h1>
+          <div style={{
+            flex:'0 0 320px',
+            minWidth:'260px',
+            display:'flex',
+            alignItems:'center',
+            justifyContent:'center',
+            position: 'absolute',
+            left: '390px',
+            top: '350px',
+            zIndex: 20,
+            width: '320px',
+            pointerEvents: 'none',
+          }}>
+            <h1 style={{margin:0, color:'#111', fontSize:'1.2rem', fontWeight:800, textAlign:'center', letterSpacing:'-1px', pointerEvents: 'auto'}}>Edycje konkursu</h1>
           </div>
         </div>
       </section>
-
       {/* Upcoming Edition Callout - now below the red title box */}
   <section className="upcoming-edition-callout" style={{background:'#fff', boxShadow:'0 2px 12px #0001', margin:'32px auto 0 auto', maxWidth:'1000px', width:'100%', padding:'32px 24px', display:'flex', flexDirection:'column', alignItems:'center', gap:'18px', justifyContent:'center'}}>
         <div style={{fontSize:'1.5rem', fontWeight:700, color:'#630102', textAlign:'center'}}>Nadchodzi nowa edycja Mechaton!</div>
