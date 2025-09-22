@@ -1,25 +1,73 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import veoliaLogo from '../assets/VEOLIA.jpg';
 import secowarwickLogo from '../assets/SECOWARWICK.jpg';
 import commonLogo from '../assets/COMMON.jpg';
 import commonMechaton from '../assets/common-mechaton.jpg';
 import secowarwickMechaton from '../assets/secowarwick-mechaton.jpg';
 import veoliaMechaton from '../assets/veolia-mechaton.jpg';
+import oldTv from '../assets/old_tv_no_bg.png';
+import meshVideo from '../assets/mesh.mp4';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import RegistrationForm from '../components/RegistrationForm';
 
 const EditionsPage = () => {
   const [formOpen, setFormOpen] = useState(false);
+  const [showSplash, setShowSplash] = useState(true);
+  const [fadeSplash, setFadeSplash] = useState(false);
+  const splineRef = useRef(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setFadeSplash(true), 5000);
+    let removeTimer;
+    if (fadeSplash) {
+      removeTimer = setTimeout(() => setShowSplash(false), 600); // 600ms fade
+    }
+    return () => {
+      clearTimeout(timer);
+      if (removeTimer) clearTimeout(removeTimer);
+    };
+  }, [fadeSplash]);
   return (
     <>
       <Header />
       <RegistrationForm open={formOpen} onClose={() => setFormOpen(false)} />
-      <main>
+        <main style={{marginTop: '-50px'}}>
       {/* Page Header */}
       <section className="page-header">
-        <div className="container">
-          <h1>Edycje konkursu</h1>
+        <div className="container" style={{display:'flex', flexDirection:'row', alignItems:'center', gap:'32px', justifyContent:'center', flexWrap:'wrap'}}>
+          <div
+            ref={splineRef}
+            style={{flex:'1 1 800px', minWidth:'620px', maxWidth:'1600px', height:'800px', display:'flex', alignItems:'center', justifyContent:'center', position:'relative', marginLeft:'-20px'}}
+          >
+            {/* Splash video overlay */}
+            {showSplash && (
+              <div style={{
+                position:'absolute',
+                zIndex:10,
+                top:140,
+                left:50,
+                background:'#000',
+                width:'80%',
+                height:'60%',
+                display:'flex',
+                alignItems:'center',
+                justifyContent:'center',
+                opacity: fadeSplash ? 0 : 1,
+                transition: 'opacity 0.6s ease'
+              }}>
+                <video src={meshVideo} autoPlay muted playsInline style={{width:'100%', height:'100%', objectFit:'cover'}} />
+              </div>
+            )}
+            <div style={{width:'100%', height:'100%', display:'flex', alignItems:'center', justifyContent:'center', transform:'scale(0.7)', transformOrigin:'center', marginLeft:'-100px'}}>
+              <iframe frameBorder="0" src="https://my.spline.design/mechanism-8E3rWLDN8xWbn5XZ5yG7oNU0/" width="100%" height="100%" style={{borderRadius:'18px', background:'#fff', border:'none', outline:'none', boxShadow:'none'}} allowFullScreen></iframe>
+            </div>
+            {/* Old TV overlay - always in front of splash */}
+            <img src={oldTv} alt="old tv" style={{position:'absolute', zIndex: 20, width:'200%', maxWidth:'1300px', pointerEvents:'none', left:'50%', transform:'translate(-50%, 1%)', transformOrigin:'center'}} />
+          </div>
+          <div style={{flex:'0 0 320px', minWidth:'260px', display:'flex', alignItems:'center', justifyContent:'center'}}>
+            <h1 style={{margin:0, color:'#111', fontSize:'3.2rem', fontWeight:800, textAlign:'center', letterSpacing:'-1px'}}>Edycje konkursu</h1>
+          </div>
         </div>
       </section>
 
