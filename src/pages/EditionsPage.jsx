@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import veoliaLogo from '../assets/VEOLIA.jpg';
 import secowarwickLogo from '../assets/SECOWARWICK.jpg';
 import commonLogo from '../assets/COMMON.jpg';
@@ -7,11 +7,15 @@ import secowarwickMechaton from '../assets/secowarwick-mechaton.jpg';
 import veoliaMechaton from '../assets/veolia-mechaton.jpg';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import RegistrationForm from '../components/RegistrationForm';
 
-const EditionsPage = () => (
-  <>
-    <Header />
-    <main>
+const EditionsPage = () => {
+  const [formOpen, setFormOpen] = useState(false);
+  return (
+    <>
+      <Header />
+      <RegistrationForm open={formOpen} onClose={() => setFormOpen(false)} />
+      <main>
       {/* Page Header */}
       <section className="page-header">
         <div className="container">
@@ -23,11 +27,15 @@ const EditionsPage = () => (
   <section className="upcoming-edition-callout" style={{background:'#fff', boxShadow:'0 2px 12px #0001', margin:'32px auto 0 auto', maxWidth:'1000px', width:'100%', padding:'32px 24px', display:'flex', flexDirection:'column', alignItems:'center', gap:'18px', justifyContent:'center'}}>
         <div style={{fontSize:'1.5rem', fontWeight:700, color:'#630102', textAlign:'center'}}>Nadchodzi nowa edycja Mechaton!</div>
         <div style={{fontSize:'1.1rem', color:'#222', textAlign:'center', marginBottom:'8px'}}>Zgłoś swój zespół do udziału w najbliższej edycji konkursu Mechaton.<br/>Nie przegap szansy na udział!</div>
-        <a href="https://forms.gle/your-registration-form-link" target="_blank" rel="noopener noreferrer" style={{textDecoration:'none'}}>
-          <button style={{background:'#630102', color:'#fff', fontWeight:600, fontSize:'1.1rem', border:'none', borderRadius:'8px', padding:'12px 32px', cursor:'pointer', boxShadow:'0 1px 6px #0002', transition:'background 0.2s'}} onMouseOver={e => e.currentTarget.style.background='#8a1a1a'} onMouseOut={e => e.currentTarget.style.background='#630102'}>
-            Zarejestruj zespół
-          </button>
-        </a>
+        <button
+          style={{background:'#630102', color:'#fff', fontWeight:600, fontSize:'1.1rem', border:'none', borderRadius:'8px', padding:'12px 32px', cursor:'pointer', boxShadow:'0 1px 6px #0002', transition:'background 0.2s'}}
+          onMouseOver={e => e.currentTarget.style.background='#8a1a1a'}
+          onMouseOut={e => e.currentTarget.style.background='#630102'}
+          onClick={() => setFormOpen(true)}
+        >
+          Zarejestruj zespół
+        </button>
+        
       </section>
       {/* Mechaton Edition Boxes */}
   <section className="section" style={{display:'flex', flexDirection:'column', alignItems:'center', marginBottom:'64px', width:'100%'}}>
@@ -128,7 +136,8 @@ const EditionsPage = () => (
 
     </main>
     <Footer />
-  </>
-);
+    </>
+  );
+};
 
 export default EditionsPage;

@@ -1,0 +1,89 @@
+/* Registration Modal Styles */
+.registration-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registration-modal {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  padding: 36px 32px 28px 32px;
+  min-width: 320px;
+  max-width: 95vw;
+  width: 420px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.registration-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #630102;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.registration-form label {
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+  width: 100%;
+}
+
+.registration-form input,
+.registration-form textarea {
+  width: 100%;
+  margin-top: 4px;
+  margin-bottom: 18px;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.registration-submit {
+  background: #630102;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+  min-width: 180px;
+  max-width: 320px;
+  width: 70%;
+  display: block;
+}
+
+.registration-submit:hover {
+  background: #8a1a1a;
+}
+
+.registration-success {
+  color: #2e7d32;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 32px 0 24px 0;
+}
