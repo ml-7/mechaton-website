@@ -7,7 +7,7 @@ const Footer = () => (
       <div className="footer-grid">
         <div className="footer-column">
           <h3>MECHATON</h3>
-          <p>Innowacyjny konkurs inżynierski Wydziału Mechanicznego Politechniki Łódzkiej.</p>
+          <p>Konkurs inżynierski Wydziału Mechanicznego Politechniki Łódzkiej.</p>
         </div>
         <div className="footer-column">
           <h3>Nawigacja</h3>
