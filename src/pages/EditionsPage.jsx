@@ -6,6 +6,7 @@ import commonMechaton from '../assets/common-mechaton.jpg';
 import secowarwickMechaton from '../assets/secowarwick-mechaton.jpg';
 import veoliaMechaton from '../assets/veolia-mechaton.jpg';
 import oldTv from '../assets/old_tv_no_bg.png';
+import circleArrow from '../assets/circle-arrow-icon.jpg';
 import meshVideo from '../assets/mesh.mp4';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -16,6 +17,12 @@ const EditionsPage = () => {
   const [showSplash, setShowSplash] = useState(true);
   const [fadeSplash, setFadeSplash] = useState(false);
   const splineRef = useRef(null);
+  const [showArrow, setShowArrow] = useState(false);
+
+  useEffect(() => {
+    const arrowTimer = setTimeout(() => setShowArrow(true), 8000);
+    return () => clearTimeout(arrowTimer);
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => setFadeSplash(true), 5000);
@@ -64,6 +71,47 @@ const EditionsPage = () => {
             </div>
             {/* Old TV overlay - always in front of splash */}
             <img src={oldTv} alt="old tv" style={{position:'absolute', zIndex: 20, width:'200%', maxWidth:'1300px', pointerEvents:'none', left:'50%', transform:'translate(-50%, 1%)', transformOrigin:'center'}} />
+
+            {/* Turnable arrow indicator (appears after 8s) */}
+            <style>{`
+              @keyframes spin-return {
+                0% { transform: rotate(0deg); }
+                20% { transform: rotate(30deg); }
+                50% { transform: rotate(-30deg); }
+                80% { transform: rotate(20deg); }
+                100% { transform: rotate(0deg); }
+              }
+              .spin-return-anim {
+                animation: spin-return 2.2s cubic-bezier(.4,1.6,.6,1) infinite;
+                display: block;
+              }
+              .arrow-fade-in {
+                opacity: 0;
+                transition: opacity 1.2s cubic-bezier(.4,1.6,.6,1);
+              }
+              .arrow-fade-in.visible {
+                opacity: 1;
+              }
+            `}</style>
+            <div
+              style={{
+                position: 'absolute',
+                left: '44.5%',
+                top: '71%',
+                transform: 'translate(-50%, 0)',
+                zIndex: 30,
+                display: showArrow ? 'flex' : 'none',
+                alignItems: 'center',
+                pointerEvents: 'none',
+              }}
+            >
+              <img
+                src={circleArrow}
+                alt="turnable arrow"
+                className={`spin-return-anim arrow-fade-in${showArrow ? ' visible' : ''}`}
+                style={{width:'40px', height:'40px', objectFit:'contain', opacity:0.92, filter:'drop-shadow(0 2px 6px #0002)'}}
+              />
+            </div>
           </div>
           <div style={{flex:'0 0 320px', minWidth:'260px', display:'flex', alignItems:'center', justifyContent:'center'}}>
             <h1 style={{margin:0, color:'#111', fontSize:'3.2rem', fontWeight:800, textAlign:'center', letterSpacing:'-1px'}}>Edycje konkursu</h1>
