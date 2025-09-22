@@ -1,4 +1,10 @@
 import React from 'react';
+import veoliaLogo from '../assets/VEOLIA.jpg';
+import secowarwickLogo from '../assets/SECOWARWICK.jpg';
+import commonLogo from '../assets/COMMON.jpg';
+import commonMechaton from '../assets/common-mechaton.jpg';
+import secowarwickMechaton from '../assets/secowarwick-mechaton.jpg';
+import veoliaMechaton from '../assets/veolia-mechaton.jpg';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -7,120 +13,104 @@ const EditionsPage = () => (
     <Header />
     <main>
       {/* Page Header */}
+
+      {/* Top Title */}
       <section className="page-header">
         <div className="container">
-          <div className="breadcrumbs">
-            <a href="/">Strona główna</a> <span>›</span> Edycje
-          </div>
           <h1>Edycje konkursu</h1>
-          <p>Poznaj historię i dokonania uczestników wszystkich edycji Mechatonu - od pierwszych projektów do najnowszych innowacji.</p>
         </div>
       </section>
 
-      {/* Current Edition Section */}
+      {/* Mechaton Edition Boxes */}
+
       <section className="section">
         <div className="container">
-          <div className="edition-hero">
-            <h2>Mechaton 2025</h2>
-            <p>Aktualnie trwa 8. edycja konkursu Mechaton! Temat przewodni: "Zrównoważone technologie dla inteligentnych miast".</p>
-            <a href="#" className="btn">Zgłoś swój zespół</a>
-          </div>
-
-          <div className="section-title">
-            <h2>Poprzednie edycje</h2>
-          </div>
-
-          {/* Edition 2024 */}
+          {/* III edycja - COMMON S.A. */}
           <div className="edition-card">
-            <div className="edition-image">
-              <img src="https://via.placeholder.com/1200x600" alt="Mechaton 2024" />
+            <div className="edition-image" style={{background:'#fff', display:'flex', alignItems:'center', justifyContent:'center', padding:'0 1em', height:'300px'}}>
+              <div style={{flex:'1 1 0', display:'flex', alignItems:'center', justifyContent:'center', height:'100%'}}>
+                <img src={commonLogo} alt="COMMON S.A. logo" style={{maxHeight:'200px', maxWidth:'95%', objectFit:'contain', background:'#fff', borderRadius:'12px', boxShadow:'none'}} />
+              </div>
+              <div style={{flex:'1 1 0', display:'flex', alignItems:'center', justifyContent:'center', height:'100%'}}>
+                <img src={commonMechaton} alt="III edycja - COMMON S.A." style={{maxHeight:'260px', maxWidth:'95%', objectFit:'contain', borderRadius:'12px', background:'#f5f5f5'}} />
+              </div>
             </div>
             <div className="edition-content">
-              <span className="edition-year">2024</span>
-              <h3>Roboty wspierające w przemyśle</h3>
-              <p>Siódma edycja konkursu skupiła się na projektowaniu rozwiązań robotycznych wspomagających pracę człowieka w środowisku przemysłowym. Uczestnicy tworzyli prototypy robotów współpracujących oraz systemów automatyzacji procesów produkcyjnych.</p>
-              
+              <div className="edition-date" style={{fontWeight:700, color:'#630102', fontSize:'1.2rem', marginBottom:'8px'}}>11.12 - 13.12.2024 r.</div>
+              {/* Removed edition name from left, now only in bold below */}
+              <span className="edition-year" style={{display:'none'}}>III edycja - COMMON S.A.</span>
+              <div style={{fontWeight:700, fontSize:'2rem', color:'#630102', marginBottom:'0.5em'}}>III edycja - COMMON S.A.</div>
+              <div className="edition-topic" style={{color:'#111', fontWeight:'bold', marginTop:'0.2em', marginBottom:'1.5em', fontSize:'1.1rem'}}>
+                Projekt 3D zespołu smarowania gazomierza turbinowego CGT-02, działającego w pozycjach poziomej i pionowej.
+              </div>
               <div className="edition-stats">
                 <div className="stat-item">
-                  <div className="stat-number">32</div>
-                  <div className="stat-label">Zespoły</div>
+                  <div className="stat-number">15</div>
+                  <div className="stat-label">Zespołów</div>
                 </div>
                 <div className="stat-item">
-                  <div className="stat-number">24</div>
-                  <div className="stat-label">Uczelnie</div>
-                </div>
-                <div className="stat-item">
-                  <div className="stat-number">125</div>
+                  <div className="stat-number">69</div>
                   <div className="stat-label">Uczestników</div>
                 </div>
               </div>
-              
-              <div className="winner-section">
-                <h4>Zwycięzcy</h4>
-                <div className="winner-grid">
-                  <div className="winner-card">
-                    <div className="winner-position">I miejsce</div>
-                    <div className="winner-name">Team RoboHelp</div>
-                    <div className="winner-project">Egzoszkielet wspomagający pracę w magazynie</div>
-                  </div>
-                  <div className="winner-card">
-                    <div className="winner-position">II miejsce</div>
-                    <div className="winner-name">MechMasters</div>
-                    <div className="winner-project">Autonomiczny robot do inspekcji linii produkcyjnych</div>
-                  </div>
-                  <div className="winner-card">
-                    <div className="winner-position">III miejsce</div>
-                    <div className="winner-name">AutoTech</div>
-                    <div className="winner-project">System wizyjny kontroli jakości</div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
-          {/* Edition 2023 */}
+          {/* II edycja - SECO/WARWICK */}
           <div className="edition-card">
-            <div className="edition-image">
-              <img src="https://via.placeholder.com/1200x600" alt="Mechaton 2023" />
+            <div className="edition-image" style={{background:'#fff', display:'flex', alignItems:'center', justifyContent:'center', padding:'0 1em', height:'300px'}}>
+              <div style={{flex:'1 1 0', display:'flex', alignItems:'center', justifyContent:'center', height:'100%'}}>
+                <img src={secowarwickLogo} alt="SECO/WARWICK logo" style={{maxHeight:'70px', maxWidth:'95%', objectFit:'contain', background:'#fff', borderRadius:'12px', boxShadow:'none'}} />
+              </div>
+              <div style={{flex:'1 1 0', display:'flex', alignItems:'center', justifyContent:'center', height:'100%'}}>
+                <img src={secowarwickMechaton} alt="II edycja - SECO/WARWICK" style={{maxHeight:'260px', maxWidth:'95%', objectFit:'contain', borderRadius:'12px', background:'#f5f5f5'}} />
+              </div>
             </div>
             <div className="edition-content">
-              <span className="edition-year">2023</span>
-              <h3>Urządzenia dla medycyny przyszłości</h3>
-              <p>Szósta edycja Mechatonu była poświęcona tworzeniu innowacyjnych rozwiązań mechatronicznych dla zastosowań medycznych. Zespoły projektowały urządzenia rehabilitacyjne, diagnostyczne i wspomagające pracę personelu medycznego.</p>
-              
+              <div className="edition-date" style={{fontWeight:700, color:'#630102', fontSize:'1.2rem', marginBottom:'8px'}}>22.11 - 24.11.2023 r.</div>
+              <span className="edition-year" style={{display:'none'}}>II edycja - SECO/WARWICK</span>
+              <div style={{fontWeight:700, fontSize:'2rem', color:'#630102', marginBottom:'0.5em'}}>II edycja - SECO/WARWICK</div>
+              <div className="edition-topic" style={{color:'#111', fontWeight:'bold', marginTop:'0.2em', marginBottom:'1.5em', fontSize:'1.1rem'}}>
+                Koncepcja napędu pionowego dwukomorowego pieca próżniowego CMe 9912 z wanną olejową.
+              </div>
               <div className="edition-stats">
                 <div className="stat-item">
-                  <div className="stat-number">28</div>
-                  <div className="stat-label">Zespoły</div>
+                  <div className="stat-number">15</div>
+                  <div className="stat-label">Zespołów</div>
                 </div>
                 <div className="stat-item">
-                  <div className="stat-number">19</div>
-                  <div className="stat-label">Uczelnie</div>
-                </div>
-                <div className="stat-item">
-                  <div className="stat-number">110</div>
+                  <div className="stat-number">74</div>
                   <div className="stat-label">Uczestników</div>
                 </div>
               </div>
-              
-              <div className="winner-section">
-                <h4>Zwycięzcy</h4>
-                <div className="winner-grid">
-                  <div className="winner-card">
-                    <div className="winner-position">I miejsce</div>
-                    <div className="winner-name">MedTech Solutions</div>
-                    <div className="winner-project">Interaktywna orteza rehabilitacyjna</div>
-                  </div>
-                  <div className="winner-card">
-                    <div className="winner-position">II miejsce</div>
-                    <div className="winner-name">Health Mechanics</div>
-                    <div className="winner-project">System monitorowania parametrów życiowych pacjentów</div>
-                  </div>
-                  <div className="winner-card">
-                    <div className="winner-position">III miejsce</div>
-                    <div className="winner-name">BioInnovators</div>
-                    <div className="winner-project">Robot do transportu leków w szpitalu</div>
-                  </div>
+            </div>
+          </div>
+
+          {/* I edycja - VEOLIA */}
+          <div className="edition-card">
+            <div className="edition-image" style={{background:'#fff', display:'flex', alignItems:'center', justifyContent:'center', padding:'0 1em', height:'300px'}}>
+              <div style={{flex:'1 1 0', display:'flex', alignItems:'center', justifyContent:'center', height:'100%'}}>
+                <img src={veoliaLogo} alt="VEOLIA logo" style={{maxHeight:'200px', maxWidth:'95%', objectFit:'contain', background:'#fff', borderRadius:'12px', boxShadow:'none'}} />
+              </div>
+              <div style={{flex:'1 1 0', display:'flex', alignItems:'center', justifyContent:'center', height:'100%'}}>
+                <img src={veoliaMechaton} alt="I edycja - VEOLIA" style={{maxHeight:'260px', maxWidth:'95%', objectFit:'contain', borderRadius:'12px', background:'#f5f5f5'}} />
+              </div>
+            </div>
+            <div className="edition-content">
+              <div className="edition-date" style={{fontWeight:700, color:'#630102', fontSize:'1.2rem', marginBottom:'8px'}}>18.01 - 20.01.2023 r.</div>
+              <span className="edition-year" style={{display:'none'}}>I edycja - VEOLIA</span>
+              <div style={{fontWeight:700, fontSize:'2rem', color:'#630102', marginBottom:'0.5em'}}>I edycja - VEOLIA</div>
+              <div className="edition-topic" style={{color:'#111', fontWeight:'bold', marginTop:'0.2em', marginBottom:'1.5em', fontSize:'1.1rem'}}>
+                Projekt odzysku ciepła z zakładu przemysłowego do sieci wysokoparametrowej DN800.
+              </div>
+              <div className="edition-stats">
+                <div className="stat-item">
+                  <div className="stat-number">11</div>
+                  <div className="stat-label">Zespołów</div>
+                </div>
+                <div className="stat-item">
+                  <div className="stat-number">50</div>
+                  <div className="stat-label">Uczestników</div>
                 </div>
               </div>
             </div>
@@ -128,80 +118,9 @@ const EditionsPage = () => (
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="section">
-        <div className="container">
-          <div className="section-title">
-            <h2>Galeria projektów</h2>
-          </div>
-          
-          <p>Zobacz najciekawsze momenty i projekty z poprzednich edycji konkursu Mechaton.</p>
-          
-          <div className="gallery-grid">
-            <div className="gallery-item">
-              <img src="https://via.placeholder.com/600x400" alt="Projekt 1" />
-            </div>
-            <div className="gallery-item">
-              <img src="https://via.placeholder.com/600x400" alt="Projekt 2" />
-            </div>
-            <div className="gallery-item">
-              <img src="https://via.placeholder.com/600x400" alt="Projekt 3" />
-            </div>
-            <div className="gallery-item">
-              <img src="https://via.placeholder.com/600x400" alt="Projekt 4" />
-            </div>
-            <div className="gallery-item">
-              <img src="https://via.placeholder.com/600x400" alt="Projekt 5" />
-            </div>
-            <div className="gallery-item">
-              <img src="https://via.placeholder.com/600x400" alt="Projekt 6" />
-            </div>
-          </div>
-          
-          <div className="archive-editions">
-            <div className="section-title">
-              <h2>Archiwum edycji</h2>
-            </div>
-            
-            <div className="archive-list">
-              <div className="archive-item">
-                <div className="archive-year">2022</div>
-                <div className="archive-title">Energooszczędne systemy automatyki</div>
-                <a href="#" className="btn-small">Szczegóły</a>
-              </div>
-              <div className="archive-item">
-                <div className="archive-year">2021</div>
-                <div className="archive-title">Rozwiązania dla rolnictwa 4.0</div>
-                <a href="#" className="btn-small">Szczegóły</a>
-              </div>
-              <div className="archive-item">
-                <div className="archive-year">2020</div>
-                <div className="archive-title">Zdalne systemy sterowania</div>
-                <a href="#" className="btn-small">Szczegóły</a>
-              </div>
-              <div className="archive-item">
-                <div className="archive-year">2019</div>
-                <div className="archive-title">Robotyka mobilna</div>
-                <a href="#" className="btn-small">Szczegóły</a>
-              </div>
-              <div className="archive-item">
-                <div className="archive-year">2018</div>
-                <div className="archive-title">Pierwsza edycja</div>
-                <a href="#" className="btn-small">Szczegóły</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="cta">
-        <div className="container">
-          <h2>Dołącz do następnej edycji!</h2>
-          <p>Chcesz zaprezentować swoje umiejętności inżynierskie i zmierzyć się z inspirującymi wyzwaniami? Zapisz się do newslettera i bądź na bieżąco z informacjami o kolejnych edycjach.</p>
-          <a href="#" className="btn">Zapisz się do newslettera</a>
-        </div>
-      </section>
+
+
     </main>
     <Footer />
   </>
