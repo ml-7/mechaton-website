@@ -50,6 +50,25 @@
     gap: 15px;
     margin-right: auto;
     margin-left: -60px;
+    transition: margin-left 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+@media (max-width: 1100px) {
+    .logo-container {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .logo-container {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo-container {
+        margin-left: 50px;
+    }
 }
 
 .logo-image {
