@@ -27,9 +27,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/o-mechatonie" element={<AboutPage />} />
-        <Route path="/edycje" element={<EditionsPage />} />
-        <Route path="/wspolpraca" element={<PartnershipPage />} />
-        <Route path="/basic-editions" element={<BasicEditionsPage />} />
+  <Route path="/editions-special" element={<EditionsPage />} />
+  <Route path="/edycje" element={<BasicEditionsPage />} />
+  <Route path="/wspolpraca" element={<PartnershipPage />} />
       </Routes>
     </Router>
   );
