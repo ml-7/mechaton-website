@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import EditionsPage from './pages/EditionsPage';
 import PartnershipPage from './pages/PartnershipPage';
+import BasicEditionsPage from './pages/BasicEditionsPage';
 
 
 // Prevent zooming with ctrl+wheel globally
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/o-mechatonie" element={<AboutPage />} />
         <Route path="/edycje" element={<EditionsPage />} />
         <Route path="/wspolpraca" element={<PartnershipPage />} />
+        <Route path="/basic-editions" element={<BasicEditionsPage />} />
       </Routes>
     </Router>
   );
