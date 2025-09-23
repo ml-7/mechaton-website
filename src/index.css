@@ -464,11 +464,58 @@ nav {
     z-index: 2; /* Na przodzie */
     padding: 2rem;
     display: flex;
-    align-items: flex-end; /* Tekst na dole sekcji */
     justify-content: center;
     min-height: 500px; /* Większa wysokość żeby tekst był niżej */
     pointer-events: none; /* Pozwala na kliknięcia przez tekst do siatki */
     padding-bottom: 7rem; /* Więcej miejsca na dole */
+}
+
+
+/* Default: flex-end, as before */
+.about-content-hidden {
+    align-items: flex-end;
+}
+
+/* Only absolutely position on smaller screens */
+@media (max-width: 1100px) {
+    .about-content-hidden {
+        align-items: initial;
+    }
+    .about-content-hidden .about-text {
+        position: absolute;
+        left: 50%;
+        bottom: 2.5rem;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-content-hidden .about-text {
+        bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .about-content-hidden {
+        min-height: 400px;
+        padding-bottom: 6rem;
+    }
+    .about-content-hidden .about-text {
+        bottom: 2.5rem;
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-content-hidden {
+        min-height: 320px;
+        padding-bottom: 4rem;
+    }
+    .about-content-hidden .about-text {
+        bottom: 1.5rem;
+    }
 }
 
 .about-content-hidden .about-text {
@@ -489,20 +536,27 @@ nav {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .about-content-hidden {
         padding: 1rem;
+        min-height: 400px;
+        padding-bottom: 6rem;
     }
-    
     .about-content-hidden .about-text {
-        font-size: 1.4rem !important; /* Spójna z p na mobile */
-        max-width: 95%; /* Mniejsza szerokość na mobile */
-        line-height: 1.4; /* Lepszy line-height na mobile */
+        font-size: 1.4rem !important;
+        max-width: 95%;
+        line-height: 1.4;
     }
-    
     .about-content-hidden .about-text p {
-        font-size: 1.4rem !important; /* Mniejsza czcionka na mobile */
-        line-height: 1.4 !important; /* Lepszy line-height na mobile */
+        font-size: 1.4rem !important;
+        line-height: 1.4 !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-content-hidden {
+        min-height: 320px;
+        padding-bottom: 4rem;
     }
 }
 
@@ -591,12 +645,40 @@ nav {
 }
 
 .hero-layout {
-    display: flex;
-    align-items: center;
-    gap: 0px;
-    height: 100%;
-    margin-left: -300px;
-    position: relative;
+        display: flex;
+        align-items: center;
+        gap: 0px;
+        height: 100%;
+        margin-left: -300px;
+        position: relative;
+        transition: margin-left 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+@media (max-width: 1400px) {
+    .hero-layout {
+        margin-left: -180px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-layout {
+        margin-left: -40px;
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-layout {
+        margin-left: -20px;
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-layout {
+        margin-left: 0;
+        padding-left: 5px;
+    }
 }
 
 .hero-side-logo {
