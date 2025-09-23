@@ -11,7 +11,7 @@ import veoliaMechaton from '../assets/veolia-mechaton.jpg';
 const BasicEditionsPage = () => (
   <>
     <Header />
-    <main style={{ minHeight: '60vh', background: '#faf9f6' }}>
+    <main style={{ minHeight: '60vh', background: '#ffffffff', position: 'relative', left: '-30px' }}>
       <section className="section" style={{display:'flex', flexDirection:'column', alignItems:'center', marginBottom:'64px', width:'100%'}}>
         {/* III edycja - COMMON S.A. */}
         <div className="edition-card" style={{width:'100%', maxWidth:'1200px'}}>
@@ -38,6 +38,48 @@ const BasicEditionsPage = () => (
                 <div className="stat-item">
                   <div className="stat-number">69</div>
                   <div className="stat-label">Uczestników</div>
+                </div>
+              </div>
+              {/* Winners */}
+              <div className="edition-winners" style={{marginTop:'18px'}}>
+                <div style={{fontWeight:700, color:'#630102', marginBottom:'6px', fontSize:'1.38em'}}>Zwycięzcy:</div>
+                <div style={{display:'flex', flexDirection:'column', gap:'10px'}}>
+                  <div style={{display:'flex', alignItems:'center', gap:'14px'}}>
+                    <span style={{
+                      display:'inline-flex', alignItems:'center', justifyContent:'center',
+                      width:'48px', height:'48px', borderRadius:'50%', border:'3px solid #FFD700',
+                      color:'#FFD700', fontWeight:900, fontSize:'1.55em', background:'#fff',
+                      boxShadow:'0 1px 4px #0001', flexShrink:0
+                    }}>1</span>
+                    <span style={{fontWeight:500, color:'#222', fontSize:'1.13em'}}>
+                      <b>WYKORBIONE ÓSEMKI</b><br/>
+                      <span style={{fontWeight:400, color:'#444'}}>Stanisław Janiak, Amelia Kiełbasińska, Jakub Michalski, Piotr Owczarek, Rafał Parfieniuk</span>
+                    </span>
+                  </div>
+                  <div style={{display:'flex', alignItems:'center', gap:'14px'}}>
+                    <span style={{
+                      display:'inline-flex', alignItems:'center', justifyContent:'center',
+                      width:'48px', height:'48px', borderRadius:'50%', border:'3px solid #C0C0C0',
+                      color:'#C0C0C0', fontWeight:900, fontSize:'1.38em', background:'#fff',
+                      boxShadow:'0 1px 4px #0001', flexShrink:0
+                    }}>2</span>
+                    <span style={{fontWeight:500, color:'#222', fontSize:'1.13em'}}>
+                      <b>DELTA SZWADRON SUPER COOL KOMANDO WILKÓW ALFA</b><br/>
+                      <span style={{fontWeight:400, color:'#444'}}>Damian Adamczyk, Filip Frączkowski, Agnieszka Gręda, Wojciech Walendzik, Szymon Żurawski</span>
+                    </span>
+                  </div>
+                  <div style={{display:'flex', alignItems:'center', gap:'14px'}}>
+                    <span style={{
+                      display:'inline-flex', alignItems:'center', justifyContent:'center',
+                      width:'48px', height:'48px', borderRadius:'50%', border:'3px solid #cd7f32',
+                      color:'#cd7f32', fontWeight:900, fontSize:'1.38em', background:'#fff',
+                      boxShadow:'0 1px 4px #0001', flexShrink:0
+                    }}>3</span>
+                    <span style={{fontWeight:500, color:'#222', fontSize:'1.13em'}}>
+                      <b>EKIPA SKND3D</b><br/>
+                      <span style={{fontWeight:400, color:'#444'}}>Witold Borkowski, Mikołaj Mizgała, Gracjan Rybiński, Miłosz Ugorny, Jakub Wiśniewski</span>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -70,6 +112,48 @@ const BasicEditionsPage = () => (
                   <div className="stat-label">Uczestników</div>
                 </div>
               </div>
+              {/* Winners */}
+              <div className="edition-winners" style={{marginTop:'18px'}}>
+                <div style={{fontWeight:700, color:'#630102', marginBottom:'6px', fontSize:'1.38em'}}>Zwycięzcy:</div>
+                <div style={{display:'flex', flexDirection:'column', gap:'10px'}}>
+                  <div style={{display:'flex', alignItems:'center', gap:'14px'}}>
+                    <span style={{
+                      display:'inline-flex', alignItems:'center', justifyContent:'center',
+                      width:'48px', height:'48px', borderRadius:'50%', border:'3px solid #FFD700',
+                      color:'#FFD700', fontWeight:900, fontSize:'1.55em', background:'#fff',
+                      boxShadow:'0 1px 4px #0001', flexShrink:0
+                    }}>1</span>
+                    <span style={{fontWeight:500, color:'#222', fontSize:'1.13em'}}>
+                      <b>Delta Szwadron Super Cool Komando Wilków Alfa</b><br/>
+                      <span style={{fontWeight:400, color:'#444'}}>Jakub Kadłubaj, Mateusz Matecki, Wojciech Walendzik, Maciej Nowak, Damian Adamczyk</span>
+                    </span>
+                  </div>
+                  <div style={{display:'flex', alignItems:'center', gap:'14px'}}>
+                    <span style={{
+                      display:'inline-flex', alignItems:'center', justifyContent:'center',
+                      width:'48px', height:'48px', borderRadius:'50%', border:'3px solid #C0C0C0',
+                      color:'#C0C0C0', fontWeight:900, fontSize:'1.38em', background:'#fff',
+                      boxShadow:'0 1px 4px #0001', flexShrink:0
+                    }}>2</span>
+                    <span style={{fontWeight:500, color:'#222', fontSize:'1.13em'}}>
+                      <b>ZAPTASZONE-OCTAVIANY</b><br/>
+                      <span style={{fontWeight:400, color:'#444'}}>Wiktor Lewandowski, Adam Koślin, Filip Chróścikowski, Mateusz Łukaszczyk, Jakub Pawłowski</span>
+                    </span>
+                  </div>
+                  <div style={{display:'flex', alignItems:'center', gap:'14px'}}>
+                    <span style={{
+                      display:'inline-flex', alignItems:'center', justifyContent:'center',
+                      width:'48px', height:'48px', borderRadius:'50%', border:'3px solid #cd7f32',
+                      color:'#cd7f32', fontWeight:900, fontSize:'1.38em', background:'#fff',
+                      boxShadow:'0 1px 4px #0001', flexShrink:0
+                    }}>3</span>
+                    <span style={{fontWeight:500, color:'#222', fontSize:'1.13em'}}>
+                      <b>2T3ME</b><br/>
+                      <span style={{fontWeight:400, color:'#444'}}>Adam Jeżyński, Jakub Dabbous, Marek Cendrowski, Jan Nowiński, Maciej Tutak</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -98,6 +182,39 @@ const BasicEditionsPage = () => (
                 <div className="stat-item">
                   <div className="stat-number">50</div>
                   <div className="stat-label">Uczestników</div>
+                </div>
+              </div>
+              {/* Winners */}
+              <div className="edition-winners" style={{marginTop:'18px'}}>
+                <div style={{fontWeight:700, color:'#630102', marginBottom:'6px', fontSize:'1.38em'}}>Zwycięzcy:</div>
+                <div style={{display:'flex', flexDirection:'column', gap:'10px'}}>
+                  <div style={{display:'flex', alignItems:'center', gap:'14px'}}>
+                    <span style={{
+                      display:'inline-flex', alignItems:'center', justifyContent:'center',
+                      width:'48px', height:'48px', borderRadius:'50%', border:'3px solid #FFD700',
+                      color:'#FFD700', fontWeight:900, fontSize:'1.55em', background:'#fff',
+                      boxShadow:'0 1px 4px #0001', flexShrink:0
+                    }}>1</span>
+                    <span style={{fontWeight:500, color:'#222', fontSize:'1.13em'}}>Michał Ozimek, Alicja Tworek, Bartłomiej Dyniak, Kamil Owczarczyk, Remigiusz Pietrzykowski</span>
+                  </div>
+                  <div style={{display:'flex', alignItems:'center', gap:'14px'}}>
+                    <span style={{
+                      display:'inline-flex', alignItems:'center', justifyContent:'center',
+                      width:'48px', height:'48px', borderRadius:'50%', border:'3px solid #C0C0C0',
+                      color:'#C0C0C0', fontWeight:900, fontSize:'1.38em', background:'#fff',
+                      boxShadow:'0 1px 4px #0001', flexShrink:0
+                    }}>2</span>
+                    <span style={{fontWeight:500, color:'#222', fontSize:'1.13em'}}>Maciej Tutak, Jan Nowiński, Adam Jeżyński, Jakub Dabbous</span>
+                  </div>
+                  <div style={{display:'flex', alignItems:'center', gap:'14px'}}>
+                    <span style={{
+                      display:'inline-flex', alignItems:'center', justifyContent:'center',
+                      width:'48px', height:'48px', borderRadius:'50%', border:'3px solid #cd7f32',
+                      color:'#cd7f32', fontWeight:900, fontSize:'1.38em', background:'#fff',
+                      boxShadow:'0 1px 4px #0001', flexShrink:0
+                    }}>3</span>
+                    <span style={{fontWeight:500, color:'#222', fontSize:'1.13em'}}>Jakub Michalski, Rafał Parfieniuk, Stanisław Janiak, Krzysztof Jachowicz, Amelia Kiełbasińska</span>
+                  </div>
                 </div>
               </div>
             </div>
