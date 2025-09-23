@@ -1,8 +1,22 @@
 import React, { useEffect, useState } from 'react';
+
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import IndustryPng from '../assets/Industry.png';
+import IntercollegiatePng from '../assets/Intercollegiate.png';
+import MentoringPng from '../assets/Mentoring.png';
 
 const PartnershipPage = () => {
+  // Set black background for this page
+  React.useEffect(() => {
+    document.body.classList.add('partnership-bg');
+    const root = document.getElementById('root');
+    if (root) root.classList.add('partnership-page');
+    return () => {
+      document.body.classList.remove('partnership-bg');
+      if (root) root.classList.remove('partnership-page');
+    };
+  }, []);
   // Typewriter state
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -268,6 +282,12 @@ const PartnershipPage = () => {
         </div>
       </section>
 
+      {/* Animated white glowing impulse separator */}
+      <div className="glow-separator-wrapper">
+        <div className="glow-separator">
+          <div className="glow-impulse" />
+        </div>
+      </div>
       {/* Partnership Options */}
       <section className="section" id="partnerstwo">
         <div className="container">
@@ -303,9 +323,6 @@ const PartnershipPage = () => {
           <div className="section-title">
             <h2>Dlaczego warto współpracować z Mechatonem?</h2>
           </div>
-          
-          <p>Konkurs MECHATON to jedno z najważniejszych wydarzeń inżynierskich organizowanych przez Wydział Mechaniczny Politechniki Łódzkiej. Skupia najzdolniejszych studentów i młodych inżynierów z całej Polski, którzy prezentują innowacyjne projekty z zakresu mechaniki, automatyki i elektroniki.</p>
-          
           <div className="partnership-box">
             <div className="partnership-content">
               <div className="partnership-text">
@@ -315,7 +332,7 @@ const PartnershipPage = () => {
                 <a href="#formularz-kontaktowy" className="btn">Zostań partnerem</a>
               </div>
               <div className="partnership-image">
-                <img src="https://via.placeholder.com/600x400" alt="Partnerstwo dla firm" />
+                <img src={IndustryPng} alt="Partnerstwo dla firm" />
               </div>
             </div>
           </div>
@@ -323,7 +340,7 @@ const PartnershipPage = () => {
           <div className="partnership-box">
             <div className="partnership-content">
               <div className="partnership-image">
-                <img src="https://via.placeholder.com/600x400" alt="Partnerstwo dla uczelni" />
+                <img src={IntercollegiatePng} alt="Partnerstwo dla uczelni" />
               </div>
               <div className="partnership-text">
                 <h3>Współpraca międzyuczelniana</h3>
@@ -343,7 +360,7 @@ const PartnershipPage = () => {
                 <a href="#formularz-kontaktowy" className="btn">Zostań mentorem</a>
               </div>
               <div className="partnership-image">
-                <img src="https://via.placeholder.com/600x400" alt="Program mentoringowy" />
+                <img src={MentoringPng} alt="Program mentoringowy" />
               </div>
             </div>
           </div>
@@ -356,9 +373,6 @@ const PartnershipPage = () => {
           <div className="section-title">
             <h2>Korzyści ze współpracy</h2>
           </div>
-          
-          <p>Partnerstwo z konkursem MECHATON to inwestycja w przyszłość branży inżynierskiej oraz szereg wymiernych korzyści dla Twojej organizacji.</p>
-          
           <div className="benefits-grid">
             <div className="benefit-card">
               <div className="benefit-icon"></div>
@@ -406,9 +420,7 @@ const PartnershipPage = () => {
           <div className="section-title">
             <h2>Skontaktuj się z nami</h2>
           </div>
-          
-          <p>Jeśli jesteś zainteresowany współpracą z konkursem MECHATON, wypełnij formularz kontaktowy. Nasi specjaliści skontaktują się z Tobą, aby omówić szczegóły potencjalnej współpracy.</p>
-          
+
           <div className="contact-form-container">
             <form onSubmit={handleSubmit}>
               <div className="form-grid">
@@ -514,14 +526,7 @@ const PartnershipPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="cta">
-        <div className="container">
-          <h2>Dołącz do grona partnerów Mechatonu!</h2>
-          <p>Nie przegap szansy na współpracę z jednym z najważniejszych konkursów inżynierskich w Polsce. Wspieraj rozwój młodych talentów i buduj przyszłość branży technologicznej.</p>
-          <a href="#formularz-kontaktowy" className="btn btn-white">Skontaktuj się z nami</a>
-        </div>
-      </section>
+      {/* CTA Section removed as requested */}
     </main>
     <Footer />
   </>
