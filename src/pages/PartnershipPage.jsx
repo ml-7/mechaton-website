@@ -252,7 +252,7 @@ const PartnershipPage = () => {
         left: '17%',
         top: '990px',
         transform: 'translateX(-50%)',
-        zIndex: 69,
+        zIndex: 999,
         pointerEvents: 'none',
         width: '320px',
         maxWidth: '90vw',
@@ -288,7 +288,7 @@ const PartnershipPage = () => {
             frameBorder="0" 
             width="100%" 
             height="100%"
-            loading="lazy"
+            loading="real"
             title="Holographic Earth"
             allow="autoplay; fullscreen"
             onLoad={() => console.log('Earth model loaded successfully')}
