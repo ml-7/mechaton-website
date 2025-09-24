@@ -238,7 +238,7 @@ const PartnershipPage = () => {
 
   return (
   <>
-    <Header />
+  <Header blackOut />
     <main>
       {/* Page Header with Earth Background */}
       <section className="partnership-hero">
@@ -319,19 +319,19 @@ const PartnershipPage = () => {
               <div className="partnership-icon"></div>
               <h3>Dla firm</h3>
               <p>Zostań sponsorem konkursu, zyskaj dostęp do utalentowanych młodych inżynierów i zbuduj rozpoznawalność marki w środowisku akademickim.</p>
-              <a href="#formularz-kontaktowy" className="btn">Dołącz jako partner</a>
+              <a href="#" className="btn">Dołącz jako partner</a>
             </div>
             <div className="partnership-card">
               <div className="partnership-icon"></div>
               <h3>Dla uczelni</h3>
               <p>Dołącz do sieci uczelni partnerskich, umożliw swoim studentom udział w konkursie i wzbogać ofertę edukacyjną o praktyczne doświadczenia.</p>
-              <a href="#formularz-kontaktowy" className="btn">Nawiąż współpracę</a>
+              <a href="#" className="btn">Nawiąż współpracę</a>
             </div>
             <div className="partnership-card">
               <div className="partnership-icon"></div>
               <h3>Dla mentorów</h3>
               <p>Podziel się swoją wiedzą i doświadczeniem jako mentor. Wspieraj rozwój młodych talentów i bądź częścią inspirującej społeczności.</p>
-              <a href="#formularz-kontaktowy" className="btn">Zostań mentorem</a>
+              <a href="#" className="btn">Zostań mentorem</a>
             </div>
           </div>
         </div>
@@ -349,7 +349,7 @@ const PartnershipPage = () => {
                 <h3>Partnerstwo dla firm</h3>
                 <p>Współpraca z konkursem MECHATON to nie tylko wsparcie edukacji i rozwoju młodych talentów inżynierskich, ale także szereg korzyści dla Twojej firmy. Partnerzy konkursu zyskują dostęp do utalentowanych absolwentów, możliwość promowania swojej marki oraz okazję do prezentacji najnowszych technologii.</p>
                 <p>Oferujemy różne pakiety współpracy, które można dostosować do indywidualnych potrzeb i celów Twojej organizacji. Niezależnie od wielkości firmy, znajdziemy formułę partnerstwa, która przyniesie obopólne korzyści.</p>
-                <a href="#formularz-kontaktowy" className="btn">Zostań partnerem</a>
+                <a href="#" className="btn">Zostań partnerem</a>
               </div>
               <div className="partnership-image">
                 <img src={IndustryPng} alt="Partnerstwo dla firm" />
@@ -366,7 +366,7 @@ const PartnershipPage = () => {
                 <h3>Współpraca międzyuczelniana</h3>
                 <p>MECHATON to platforma, która łączy środowiska akademickie różnych uczelni. Współpraca międzyuczelniana pozwala na wymianę doświadczeń, transfer wiedzy oraz tworzenie interdyscyplinarnych zespołów studenckich.</p>
                 <p>Zapraszamy uczelnie techniczne do nawiązania partnerstwa, które wzbogaci ofertę dydaktyczną i otworzy nowe możliwości dla studentów. Wspólnie możemy realizować projekty badawcze, organizować warsztaty i tworzyć nowoczesne programy edukacyjne.</p>
-                <a href="#formularz-kontaktowy" className="btn">Nawiąż współpracę</a>
+                <a href="#" className="btn">Nawiąż współpracę</a>
               </div>
             </div>
           </div>
@@ -377,7 +377,7 @@ const PartnershipPage = () => {
                 <h3>Program mentoringowy</h3>
                 <p>MECHATON to nie tylko konkurs, ale również program mentoringowy, który łączy doświadczonych specjalistów z młodymi pasjonatami inżynierii. Mentorom oferujemy możliwość dzielenia się wiedzą i doświadczeniem oraz wpływania na rozwój przyszłych kadr technicznych.</p>
                 <p>Jeśli jesteś ekspertem w dziedzinie mechaniki, automatyki, elektroniki lub pokrewnych dziedzin, zapraszamy do udziału w naszym programie mentoringowym. Twoje doświadczenie może inspirować i wspierać młode talenty.</p>
-                <a href="#formularz-kontaktowy" className="btn">Zostań mentorem</a>
+                <a href="#" className="btn">Zostań mentorem</a>
               </div>
               <div className="partnership-image">
                 <img src={MentoringPng} alt="Program mentoringowy" />

@@ -1,3 +1,20 @@
+.header-blackout .logo {
+    color: #999 !important;
+}
+
+.header-blackout .nav-links a {
+    color: #fff !important;
+}
+
+.header-blackout .nav-links a.active,
+.header-blackout .nav-links a:hover {
+    color: #fff !important;
+}
+/* Blacked out header for partnership section */
+.header-blackout {
+    background: #000 !important;
+    box-shadow: 0 8px 32px 0 rgba(255,255,255,0.18), 0 2px 24px 0 rgba(0,0,0,0.32);
+}
 /* Header specific styles */
 .nav-links {
     display: flex;
@@ -17,7 +34,7 @@
 }
 
 .nav-links a.active {
-    color: #630102;
+    color: #610000;
 }
 
 .nav-links a.active::after {
@@ -31,12 +48,12 @@
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #630102;
+    background-color: #610000;
     transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #630102;
+    color: #610000;
 }
 
 .nav-links a:hover::after {

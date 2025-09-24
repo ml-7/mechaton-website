@@ -4,7 +4,7 @@ import './Header.css';
 import regulaminPdf from '../assets/regulamin/REGULAMIN_MECHATON.pdf';
 import mechatonLogo from '../assets/Mechaton-removebg.png';
 
-const Header = () => {
+const Header = ({ blackOut }) => {
   const location = useLocation();
   const [isVisible, setIsVisible] = useState(false);
 
@@ -36,7 +36,7 @@ const Header = () => {
   return (
     <>
       <div className="header-trigger"></div>
-      <header className={isVisible ? 'show' : ''}>
+  <header className={isVisible ? `show${blackOut ? ' header-blackout' : ''}` : blackOut ? 'header-blackout' : ''}>
         <div className="container">
           <nav>
             <div className="logo-container">
