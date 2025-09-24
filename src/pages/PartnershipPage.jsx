@@ -284,7 +284,7 @@ const PartnershipPage = () => {
         
         <div className="partnership-earth-background">
           <iframe 
-            src="https://my.spline.design/holographicearthwithdynamiclines-oahpaniVPVZDmeOPPJb2zFQF/" 
+            src="https://my.spline.design/-NpMcluKb58sPYBTENMuakXor/" 
             frameBorder="0" 
             width="100%" 
             height="100%"
@@ -298,9 +298,10 @@ const PartnershipPage = () => {
               position: 'absolute',
               top: 0,
               left: 0,
+              pointerEvents: 'none',
               zIndex: 1,
               background: 'transparent',
-              filter: 'blur(1px)'
+              filter: 'blur(0px)'
             }}
           />
           {/* Fallback background */}
