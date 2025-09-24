@@ -1,3 +1,12 @@
+.partnership-box .btn {
+    margin-top: 36px;
+}
+.partnership-box p {
+    text-align: justify;
+}
+.benefit-card p {
+    text-align: justify;
+}
 /* Rover fade-in animation */
 .rover-appear {
     animation: roverFadeIn 1.2s cubic-bezier(.4,0,.2,1) 0.2s both;

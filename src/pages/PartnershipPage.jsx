@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+
 import IndustryPng from '../assets/Industry.png';
 import IntercollegiatePng from '../assets/Intercollegiate.png';
 import MentoringPng from '../assets/Mentoring.png';
 import RoverPng from '../assets/Rover.png';
-import SatellitePng from '../assets/Space-satelite-robot.png';
+import SatelliteRobot from '../assets/Space-satelite-robot.png';
+import SatellitePng from '../assets/Satellite.png';
 
 const PartnershipPage = () => {
   // Fade-in effect for partnership boxes
@@ -188,7 +190,7 @@ const PartnershipPage = () => {
       const partnershipTypeText = {
         'company': 'Partnerstwo biznesowe',
         'university': 'Współpraca międzyuczelniana', 
-        'mentor': 'Program mentoringowy',
+        'mentor': 'Mentoring podczas wydarzenia',
         'other': 'Inne'
       }[formData.partnershipType] || 'Zapytanie o współpracę';
       
@@ -338,27 +340,41 @@ const PartnershipPage = () => {
             <div className="partnership-card">
               <div className="partnership-icon"></div>
               <h3>Dla firm</h3>
-              <p>Zostań sponsorem konkursu, zyskaj dostęp do utalentowanych młodych inżynierów i zbuduj rozpoznawalność marki w środowisku akademickim.</p>
-              <a href="#" className="btn">Dołącz jako partner</a>
+              <p>Zostań sponsorem konkursu, zyskaj dostęp do utalentowanych młodych inżynierów budując rozpoznawalność marki w środowisku akademickim.</p>
+              <a href="#" className="btn" onClick={e => { e.preventDefault(); document.getElementById('formularz-kontaktowy')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>Dołącz jako partner</a>
             </div>
             <div className="partnership-card">
               <div className="partnership-icon"></div>
               <h3>Dla uczelni</h3>
-              <p>Dołącz do sieci uczelni partnerskich, umożliw swoim studentom udział w konkursie i wzbogać ofertę edukacyjną o praktyczne doświadczenia.</p>
-              <a href="#" className="btn">Nawiąż współpracę</a>
+              <p>Dołącz do sieci uczelni partnerskich, umożliw swoim studentom udział w konkursie wzbogacając ofertę edukacyjną o praktyczne doświadczenia.</p>
+              <a href="#" className="btn" onClick={e => { e.preventDefault(); document.getElementById('formularz-kontaktowy')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>Nawiąż współpracę</a>
             </div>
             <div className="partnership-card">
               <div className="partnership-icon"></div>
               <h3>Dla mentorów</h3>
               <p>Podziel się swoją wiedzą i doświadczeniem jako mentor. Wspieraj rozwój młodych talentów i bądź częścią inspirującej społeczności.</p>
-              <a href="#" className="btn">Zostań mentorem</a>
+              <a href="#" className="btn" onClick={e => { e.preventDefault(); document.getElementById('formularz-kontaktowy')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>Zostań mentorem</a>
             </div>
           </div>
         </div>
       </section>
 
       {/* Detailed Partnership Info */}
-      <section className="section">
+      <section className="section" style={{ position: 'relative', zIndex: 1 }}>
+        {/* Satellite image in front of the section */}
+        <div style={{
+          position: 'absolute',
+          left: '20%',
+          top: '700px',
+          transform: 'translateX(-50%)',
+          zIndex: 100,
+          pointerEvents: 'none',
+          width: '750px',
+          maxWidth: '90vw',
+          opacity: 0.98
+        }}>
+          <img src={SatellitePng} alt="Satellite" style={{ width: '100%', height: 'auto', display: 'block' }} />
+        </div>
         <div className="container">
           <div className="section-title">
             <h2>Dlaczego warto współpracować z Mechatonem?</h2>
@@ -369,7 +385,7 @@ const PartnershipPage = () => {
                 <h3>Partnerstwo dla firm</h3>
                 <p>Współpraca z konkursem MECHATON to nie tylko wsparcie edukacji i rozwoju młodych talentów inżynierskich, ale także szereg korzyści dla Twojej firmy. Partnerzy konkursu zyskują dostęp do utalentowanych absolwentów, możliwość promowania swojej marki oraz okazję do prezentacji najnowszych technologii.</p>
                 <p>Oferujemy różne pakiety współpracy, które można dostosować do indywidualnych potrzeb i celów Twojej organizacji. Niezależnie od wielkości firmy, znajdziemy formułę partnerstwa, która przyniesie obopólne korzyści.</p>
-                <a href="#" className="btn">Zostań partnerem</a>
+                <a href="#" className="btn" onClick={e => { e.preventDefault(); document.getElementById('formularz-kontaktowy')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>Zostań partnerem</a>
               </div>
               <div className="partnership-image">
                 <img src={IndustryPng} alt="Partnerstwo dla firm" />
@@ -386,7 +402,7 @@ const PartnershipPage = () => {
                 <h3>Współpraca międzyuczelniana</h3>
                 <p>MECHATON to platforma, która łączy środowiska akademickie różnych uczelni. Współpraca międzyuczelniana pozwala na wymianę doświadczeń, transfer wiedzy oraz tworzenie interdyscyplinarnych zespołów studenckich.</p>
                 <p>Zapraszamy uczelnie techniczne do nawiązania partnerstwa, które wzbogaci ofertę dydaktyczną i otworzy nowe możliwości dla studentów. Wspólnie możemy realizować projekty badawcze, organizować warsztaty i tworzyć nowoczesne programy edukacyjne.</p>
-                <a href="#" className="btn">Nawiąż współpracę</a>
+                <a href="#" className="btn" onClick={e => { e.preventDefault(); document.getElementById('formularz-kontaktowy')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>Nawiąż współpracę</a>
               </div>
             </div>
           </div>
@@ -394,13 +410,13 @@ const PartnershipPage = () => {
           <div className="partnership-box" id="partnership-box-3">
             <div className="partnership-content">
               <div className="partnership-text">
-                <h3>Program mentoringowy</h3>
-                <p>MECHATON to nie tylko konkurs, ale również program mentoringowy, który łączy doświadczonych specjalistów z młodymi pasjonatami inżynierii. Mentorom oferujemy możliwość dzielenia się wiedzą i doświadczeniem oraz wpływania na rozwój przyszłych kadr technicznych.</p>
-                <p>Jeśli jesteś ekspertem w dziedzinie mechaniki, automatyki, elektroniki lub pokrewnych dziedzin, zapraszamy do udziału w naszym programie mentoringowym. Twoje doświadczenie może inspirować i wspierać młode talenty.</p>
-                <a href="#" className="btn">Zostań mentorem</a>
+                <h3>Mentoring podczas wydarzenia</h3>
+                <p>MECHATON to nie tylko konkurs, ale również czas na rozwój, który daje szanse połączyć doświadczonych specjalistów z młodymi pasjonatami inżynierii. Mentorom oferujemy możliwość dzielenia się wiedzą, doświadczeniem oraz wpływania na rozwój przyszłych kadr technicznych.</p>
+                <p>Jeśli jesteś ekspertem w dziedzinie mechaniki, automatyki, elektroniki lub pokrewnych dziedzin, zapraszamy do udziału. Twoje doświadczenie może inspirować i wspierać młode talenty.</p>
+                <a href="#" className="btn" onClick={e => { e.preventDefault(); document.getElementById('formularz-kontaktowy')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>Zostań mentorem</a>
               </div>
               <div className="partnership-image">
-                <img src={MentoringPng} alt="Program mentoringowy" />
+                <img src={MentoringPng} alt="Mentoring podczas wydarzenia" />
               </div>
             </div>
           </div>
@@ -463,7 +479,7 @@ const PartnershipPage = () => {
           opacity: 0.97,
           filter: 'blur(0.1px)'
         }}>
-          <img src={SatellitePng} alt="Satellite" style={{ width: '100%', height: 'auto', display: 'block' }} />
+          <img src={SatelliteRobot} alt="Satellite" style={{ width: '100%', height: 'auto', display: 'block' }} />
         </div>
       </section>
 
@@ -542,7 +558,7 @@ const PartnershipPage = () => {
                   <option value="">Wybierz rodzaj współpracy</option>
                   <option value="company">Partnerstwo biznesowe</option>
                   <option value="university">Współpraca międzyuczelniana</option>
-                  <option value="mentor">Program mentoringowy</option>
+                  <option value="mentor">Mentoring podczas wydarzenia</option>
                   <option value="other">Inne</option>
                 </select>
               </div>
