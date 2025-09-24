@@ -391,6 +391,11 @@ body.partnership-bg {
     background: #000 !important;
 }
 
+.partnership-page #formularz-kontaktowy.section {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
 .section-title {
     margin-bottom: 50px;
     position: relative;
@@ -692,7 +697,7 @@ body.partnership-bg {
     color: #000;
     border: 2px solid #fff;
     transform: translateY(-3px);
-    box-shadow: 0 0 24px 2px rgba(255,255,255,0.18);
+    box-shadow: 0 0 32px 8px rgba(255,255,255,0.32), 0 0 24px 2px rgba(255,255,255,0.18);
 }
 
 .btn:hover::before {

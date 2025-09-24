@@ -5,6 +5,8 @@ import Footer from '../components/Footer';
 import IndustryPng from '../assets/Industry.png';
 import IntercollegiatePng from '../assets/Intercollegiate.png';
 import MentoringPng from '../assets/Mentoring.png';
+import RoverPng from '../assets/Rover.png';
+import SatellitePng from '../assets/Space-satelite-robot.png';
 
 const PartnershipPage = () => {
   // Fade-in effect for partnership boxes
@@ -238,7 +240,22 @@ const PartnershipPage = () => {
 
   return (
   <>
-  <Header blackOut />
+    <Header blackOut />
+
+    {/* Rover image centered in the page flow */}
+    <div style={{
+      position: 'absolute',
+      left: '25%',
+      top: '990px',
+      transform: 'translateX(-50%)',
+      zIndex: 69,
+      pointerEvents: 'none',
+      width: '320px',
+      maxWidth: '90vw',
+      opacity: 0.95
+    }}>
+      <img src={RoverPng} alt="Rover" style={{ width: '100%', height: 'auto', display: 'block' }} />
+    </div>
     <main>
       {/* Page Header with Earth Background */}
       <section className="partnership-hero">
@@ -421,16 +438,28 @@ const PartnershipPage = () => {
             <div className="benefit-card">
               <div className="benefit-icon"></div>
               <h3>Dla mentorów</h3>
-              <p>Udział w programie mentoringowym MECHATON to rozwój zawodowy i satysfakcja z dzielenia się wiedzą.</p>
+              <p>Udział w mentoringu podczas konkursu MECHATON to rozwój zawodowy i satysfakcja z dzielenia się wiedzą.</p>
               <ul>
                 <li>Rozwój umiejętności przywódczych</li>
                 <li>Satysfakcja z wpływu na rozwój młodych talentów</li>
                 <li>Nawiązywanie kontaktów branżowych</li>
                 <li>Aktualizacja wiedzy w kontakcie z innowacyjnymi projektami</li>
-                <li>Certyfikat mentora MECHATON</li>
               </ul>
             </div>
           </div>
+        </div>
+        <div style={{
+          position: 'absolute',
+          left: '60%',
+          top: '-288px',
+          transform: 'translateX(-50%)',
+          zIndex: -1,
+          pointerEvents: 'none',
+          width: '2800px',
+          maxWidth: '80vw',
+          opacity: 0.97
+        }}>
+          <img src={SatellitePng} alt="Satellite" style={{ width: '100%', height: 'auto', display: 'block' }} />
         </div>
       </section>
 
