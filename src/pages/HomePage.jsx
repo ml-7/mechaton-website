@@ -411,7 +411,7 @@ const HomePage = () => {
       {/* Features Section */}
       <section className="section">
         <div className="container">
-          <div className="section-title">
+          <div className="home-section-title">
             <h2>Dlaczego warto wziąć udział?</h2>
           </div>
           <div className="features-grid">
@@ -453,7 +453,7 @@ const HomePage = () => {
       {/* History Section */}
       <section className="section" id="historia">
         <div className="container">
-          <div className="section-title">
+          <div className="home-section-title">
             <h2>Historia Mechatonu</h2>
           </div>
           <div className="timeline">

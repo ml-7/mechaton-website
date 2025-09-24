@@ -7,6 +7,26 @@ import IntercollegiatePng from '../assets/Intercollegiate.png';
 import MentoringPng from '../assets/Mentoring.png';
 
 const PartnershipPage = () => {
+  // Fade-in effect for partnership boxes
+  useEffect(() => {
+    const boxes = [
+      document.getElementById('partnership-box-1'),
+      document.getElementById('partnership-box-2'),
+      document.getElementById('partnership-box-3'),
+    ];
+    function onScroll() {
+      boxes.forEach((box, i) => {
+        if (!box) return;
+        const rect = box.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          setTimeout(() => box.classList.add('appear'), i * 180);
+        }
+      });
+    }
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
   // Set black background for this page
   React.useEffect(() => {
     document.body.classList.add('partnership-bg');
@@ -323,7 +343,7 @@ const PartnershipPage = () => {
           <div className="section-title">
             <h2>Dlaczego warto współpracować z Mechatonem?</h2>
           </div>
-          <div className="partnership-box">
+          <div className="partnership-box" id="partnership-box-1">
             <div className="partnership-content">
               <div className="partnership-text">
                 <h3>Partnerstwo dla firm</h3>
@@ -337,7 +357,7 @@ const PartnershipPage = () => {
             </div>
           </div>
           
-          <div className="partnership-box">
+          <div className="partnership-box" id="partnership-box-2">
             <div className="partnership-content">
               <div className="partnership-image">
                 <img src={IntercollegiatePng} alt="Partnerstwo dla uczelni" />
@@ -351,7 +371,7 @@ const PartnershipPage = () => {
             </div>
           </div>
           
-          <div className="partnership-box">
+          <div className="partnership-box" id="partnership-box-3">
             <div className="partnership-content">
               <div className="partnership-text">
                 <h3>Program mentoringowy</h3>
