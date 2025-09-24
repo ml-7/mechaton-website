@@ -364,7 +364,7 @@ const PartnershipPage = () => {
         {/* Satellite image in front of the section */}
         <div style={{
           position: 'absolute',
-          left: '20%',
+          left: '19%',
           top: '700px',
           transform: 'translateX(-50%)',
           zIndex: 100,
