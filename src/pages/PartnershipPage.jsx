@@ -243,17 +243,20 @@ const PartnershipPage = () => {
     <Header blackOut />
 
     {/* Rover image centered in the page flow */}
-    <div style={{
-      position: 'absolute',
-      left: '25%',
-      top: '990px',
-      transform: 'translateX(-50%)',
-      zIndex: 69,
-      pointerEvents: 'none',
-      width: '320px',
-      maxWidth: '90vw',
-      opacity: 0.95
-    }}>
+    <div
+      className="rover-appear"
+      style={{
+        position: 'absolute',
+        left: '17%',
+        top: '990px',
+        transform: 'translateX(-50%)',
+        zIndex: 69,
+        pointerEvents: 'none',
+        width: '320px',
+        maxWidth: '90vw',
+        opacity: 0.95
+      }}
+    >
       <img src={RoverPng} alt="Rover" style={{ width: '100%', height: 'auto', display: 'block' }} />
     </div>
     <main>
@@ -457,7 +460,8 @@ const PartnershipPage = () => {
           pointerEvents: 'none',
           width: '2800px',
           maxWidth: '80vw',
-          opacity: 0.97
+          opacity: 0.97,
+          filter: 'blur(0.1px)'
         }}>
           <img src={SatellitePng} alt="Satellite" style={{ width: '100%', height: 'auto', display: 'block' }} />
         </div>

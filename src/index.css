@@ -1,3 +1,18 @@
+/* Rover fade-in animation */
+.rover-appear {
+    animation: roverFadeIn 1.2s cubic-bezier(.4,0,.2,1) 0.2s both;
+}
+
+@keyframes roverFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .partnership-card p {
     text-align: justify;
 }
