@@ -101,8 +101,11 @@
         border-radius: 6px;
     }
     .nav-links a.active {
-        background: #f5eaea;
-        color: #610000;
+        background: none !important;
+        color: #630102 !important;
+        text-decoration: underline !important;
+        text-underline-offset: 4px;
+        font-weight: 700;
     }
     .menu-button {
         display: block !important;
