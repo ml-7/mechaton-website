@@ -7,8 +7,15 @@ import mechatonLogo from '../assets/Mechaton-removebg.png';
 const Header = ({ blackOut }) => {
   const location = useLocation();
   const [isVisible, setIsVisible] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    // Always show navbar on mobile
+    const checkMobile = () => window.innerWidth <= 600;
+    if (checkMobile()) {
+      setIsVisible(true);
+      return;
+    }
     const handleMouseMove = (e) => {
       const mouseY = e.clientY;
       if (mouseY <= 80) {
@@ -36,19 +43,25 @@ const Header = ({ blackOut }) => {
   return (
     <>
       <div className="header-trigger"></div>
-  <header className={isVisible ? `show${blackOut ? ' header-blackout' : ''}` : blackOut ? 'header-blackout' : ''}>
+      <header className={isVisible ? `show${blackOut ? ' header-blackout' : ''}` : blackOut ? 'header-blackout' : ''}>
         <div className="container">
           <nav>
             <div className="logo-container">
               <img src={mechatonLogo} alt="Mechaton Logo" className="logo-image" />
               <Link to="/" className="logo">MECHATON</Link>
             </div>
-            <div className="nav-links">
-              <Link to="/edycje" className={location.pathname.startsWith('/edycje') || location.pathname === '/basic-editions' ? 'active' : ''}>Edycje</Link>
-              <Link to="/wspolpraca" className={location.pathname.startsWith('/wspolpraca') ? 'active' : ''}>Współpraca</Link>
-              <a href={regulaminPdf} target="_blank" rel="noopener noreferrer">Regulamin</a>
+            <div className={`nav-links${mobileMenuOpen ? ' open' : ''}`}>
+              <Link to="/edycje" className={location.pathname.startsWith('/edycje') || location.pathname === '/basic-editions' ? 'active' : ''} onClick={() => setMobileMenuOpen(false)}>Edycje</Link>
+              <Link to="/wspolpraca" className={location.pathname.startsWith('/wspolpraca') ? 'active' : ''} onClick={() => setMobileMenuOpen(false)}>Współpraca</Link>
+              <a href={regulaminPdf} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>Regulamin</a>
             </div>
-            <button className="menu-button">☰</button>
+            <button className={`menu-button${mobileMenuOpen ? ' open' : ''}`} onClick={() => setMobileMenuOpen(m => !m)} aria-label="Toggle menu">
+              <span className="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </button>
           </nav>
         </div>
       </header>

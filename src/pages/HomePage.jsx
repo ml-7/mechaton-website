@@ -459,50 +459,50 @@ const HomePage = () => {
           <div className="timeline">
             <div className="timeline-item">
               <div className="timeline-content">
-                <div className="timeline-year">12.2024</div>
+                <div className="timeline-year hide-on-mobile">12.2024</div>
                 <div className="partner-logo common-logo">
                   <a href="https://www.common.pl/" target="_blank" rel="noopener noreferrer">
                     <img src={commonLogo} alt="COMMON S.A. Logo" />
                   </a>
                 </div>
-                <h3>
+                <h3 className="hide-on-mobile">
                   <a href="https://www.common.pl/" target="_blank" rel="noopener noreferrer">
                     COMMON S.A.
                   </a>
                 </h3>
-                <p>Polska firma specjalizująca się w produkcji zaawansowanych urządzeń do pomiaru gazu — w szczególności gazomierzy turbinowych i rotorowych, przetworników ciśnienia, rejestratorów danych oraz korektorów i modułów telemetrycznych.</p>
+                <p className="hide-on-mobile">Polska firma specjalizująca się w produkcji zaawansowanych urządzeń do pomiaru gazu — w szczególności gazomierzy turbinowych i rotorowych, przetworników ciśnienia, rejestratorów danych oraz korektorów i modułów telemetrycznych.</p>
               </div>
             </div>
             <div className="timeline-item">
               <div className="timeline-content">
-                <div className="timeline-year">11.2023</div>
+                <div className="timeline-year hide-on-mobile">11.2023</div>
                 <div className="partner-logo seco-logo">
                   <a href="https://www.secowarwick.com/pl/" target="_blank" rel="noopener noreferrer">
                     <img src={secoWarwickLogo} alt="SECO/WARWICK Logo" />
                   </a>
                 </div>
-                <h3>
+                <h3 className="hide-on-mobile">
                   <a href="https://www.secowarwick.com/pl/" target="_blank" rel="noopener noreferrer">
                     SECO/WARWICK
                   </a>
                 </h3>
-                <p>Polski światowy lider w produkcji pieców przemysłowych i linii technologicznych do obróbki cieplnej. Firma ze Świebodzina, która dostarcza zaawansowane rozwiązania dla przemysłu lotniczego, motoryzacyjnego i energetycznego na całym świecie.</p>
+                <p className="hide-on-mobile">Polski światowy lider w produkcji pieców przemysłowych i linii technologicznych do obróbki cieplnej. Firma ze Świebodzina, która dostarcza zaawansowane rozwiązania dla przemysłu lotniczego, motoryzacyjnego i energetycznego na całym świecie.</p>
               </div>
             </div>
             <div className="timeline-item">
               <div className="timeline-content">
-                <div className="timeline-year">01.2023</div>
+                <div className="timeline-year hide-on-mobile">01.2023</div>
                 <div className="partner-logo">
                   <a href="https://www.veolia.pl/" target="_blank" rel="noopener noreferrer">
                     <img src={veoLiaLogo} alt="VEOLIA Logo" />
                   </a>
                 </div>
-                <h3>
+                <h3 className="hide-on-mobile">
                   <a href="https://www.veolia.pl/" target="_blank" rel="noopener noreferrer">
                     VEOLIA
                   </a>
                 </h3>
-                <p>Francuski gigant w dziedzinie usług środowiskowych - zarządzanie wodą, odpadami i energią w 40 krajach świata. Firma zatrudniająca ponad 230,000 pracowników, lider w technologiach oczyszczania wody i gospodarce cyrkularnej.</p>
+                <p className="hide-on-mobile">Francuski gigant w dziedzinie usług środowiskowych - zarządzanie wodą, odpadami i energią w 40 krajach świata. Firma zatrudniająca ponad 230,000 pracowników, lider w technologiach oczyszczania wody i gospodarce cyrkularnej.</p>
               </div>
             </div>
           </div>

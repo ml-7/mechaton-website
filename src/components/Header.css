@@ -1,3 +1,151 @@
+@media (max-width: 600px) {
+    .header-blackout .nav-links {
+        background: #111 !important;
+        box-shadow: 0 4px 16px #0008;
+    }
+    .header-blackout .nav-links a {
+        color: #fff !important;
+    }
+    .header-blackout .nav-links a.active {
+        background: #222 !important;
+        color: #fff !important;
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+            .logo-container {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                flex: 0 0 auto;
+                min-width: 0;
+                margin-left: 0 !important;
+                padding-left: 0 !important;
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                z-index: 2;
+            }
+                .logo {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-75%, -105%);
+                    margin: 0 !important;
+                    padding: 0 !important;
+                    text-align: center !important;
+                    width: max-content;
+                }
+            .logo-image {
+                position: static;
+            }
+        nav {
+            position: relative;
+        }
+        .menu-button {
+            z-index: 3;
+        }
+    .logo-image {
+        height: 36px;
+        width: auto;
+        margin-right: 0px;
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+    }
+    .logo {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #630102;
+        letter-spacing: 1px;
+        white-space: nowrap;
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+        text-align: left !important;
+        position: relative;
+        left: 0;
+    }
+    .nav-links {
+        display: none !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        background: #fff;
+        box-shadow: 0 4px 16px #0002;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 10;
+        padding: 0.5rem 0 1rem 0.5rem;
+        gap: 0.5rem;
+        border-radius: 0 0 12px 12px;
+    }
+    .nav-links.open {
+        display: flex !important;
+    }
+    .nav-links a {
+        font-size: 1.2rem;
+        color: #630102;
+        padding: 0.5rem 1.5rem 0.5rem 1.2rem;
+        width: 100%;
+        text-align: left;
+        border-radius: 6px;
+    }
+    .nav-links a.active {
+        background: #f5eaea;
+        color: #610000;
+    }
+    .menu-button {
+        display: block !important;
+        background: none;
+        border: none;
+        color: #630102;
+        cursor: pointer;
+        margin-left: auto;
+        padding: 0 8px;
+        width: 44px;
+        height: 44px;
+        position: relative;
+        z-index: 20;
+    }
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        position: relative;
+    }
+    .menu-icon span {
+        display: block;
+        width: 28px;
+        height: 5px;
+        background: #630102;
+        margin: 4px 0;
+        border-radius: 3px;
+        transition: all 0.3s cubic-bezier(.4,0,.2,1);
+        position: relative;
+    }
+    .menu-button.open .menu-icon span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-button.open .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-button.open .menu-icon span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}
 .header-blackout .logo {
     color: #999 !important;
 }
