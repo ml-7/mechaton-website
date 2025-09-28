@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
+import AboutUsPage from './pages/AboutUsPage';
 import EditionsPage from './pages/EditionsPage';
 import PartnershipPage from './pages/PartnershipPage';
 import BasicEditionsPage from './pages/BasicEditionsPage';
@@ -25,11 +26,12 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/o-mechatonie" element={<AboutPage />} />
-  <Route path="/editions-special" element={<EditionsPage />} />
-  <Route path="/edycje" element={<BasicEditionsPage />} />
-  <Route path="/wspolpraca" element={<PartnershipPage />} />
+    <Route path="/" element={<HomePage />} />
+    <Route path="/o-mechatonie" element={<AboutPage />} />
+    <Route path="/o-nas" element={<AboutUsPage />} />
+    <Route path="/editions-special" element={<EditionsPage />} />
+    <Route path="/edycje" element={<BasicEditionsPage />} />
+    <Route path="/wspolpraca" element={<PartnershipPage />} />
       </Routes>
     </Router>
   );

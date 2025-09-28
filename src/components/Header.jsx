@@ -54,6 +54,7 @@ const Header = ({ blackOut }) => {
               <Link to="/edycje" className={location.pathname.startsWith('/edycje') || location.pathname === '/basic-editions' ? 'active' : ''} onClick={() => setMobileMenuOpen(false)}>Edycje</Link>
               <Link to="/wspolpraca" className={location.pathname.startsWith('/wspolpraca') ? 'active' : ''} onClick={() => setMobileMenuOpen(false)}>Współpraca</Link>
               <a href={regulaminPdf} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>Regulamin</a>
+               <Link to="/o-nas" className={location.pathname.startsWith('/o-nas') ? 'active' : ''} onClick={() => setMobileMenuOpen(false)}>O nas</Link>
             </div>
             <button className={`menu-button${mobileMenuOpen ? ' open' : ''}`} onClick={() => setMobileMenuOpen(m => !m)} aria-label="Toggle menu">
               <span className="menu-icon">
