@@ -436,18 +436,21 @@ const HomePage = () => {
 
 
       {/* Registration Callout Block (moved from EditionsPage) */}
-      <section className="upcoming-edition-callout" style={{background:'#fff', boxShadow:'0 2px 12px #0001', margin:'48px auto 0 auto', maxWidth:'1000px', width:'100%', padding:'32px 24px', display:'flex', flexDirection:'column', alignItems:'center', gap:'18px', justifyContent:'center'}}>
-        <div style={{fontSize:'1.5rem', fontWeight:700, color:'#630102', textAlign:'center'}}>Nadchodzi nowa edycja Mechaton!</div>
-        <div style={{fontSize:'1.1rem', color:'#222', textAlign:'center', marginBottom:'8px'}}>Zgłoś swój zespół do udziału w najbliższej edycji konkursu Mechaton.<br/>Nie przegap szansy na udział!</div>
-        <a
-          href="https://forms.gle/your-form-link" // TODO: replace with actual registration link
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{background:'#630102', color:'#fff', fontWeight:600, fontSize:'1.1rem', border:'none', borderRadius:'8px', padding:'12px 32px', cursor:'pointer', boxShadow:'0 1px 6px #0002', transition:'background 0.2s', textDecoration:'none', display:'inline-block'}}
-        >
-          Przejdź do formularza rejestracyjnego
-        </a>
-      </section>
+      {/* Registration segment controlled by boolean */}
+      {true && (
+        <section className="upcoming-edition-callout" style={{background:'#fff', boxShadow:'0 2px 12px #0001', margin:'48px auto 0 auto', maxWidth:'1000px', width:'100%', padding:'32px 24px', display:'flex', flexDirection:'column', alignItems:'center', gap:'18px', justifyContent:'center'}}>
+          <div style={{fontSize:'1.5rem', fontWeight:700, color:'#630102', textAlign:'center'}}>Nadchodzi nowa edycja Mechaton!</div>
+          <div style={{fontSize:'1.1rem', color:'#222', textAlign:'center', marginBottom:'8px'}}>Zgłoś swój zespół do udziału w najbliższej edycji konkursu Mechaton.<br/>Nie przegap szansy na udział!</div>
+          <a
+            href="https://forms.gle/your-form-link" // TODO: replace with actual registration link
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{background:'#630102', color:'#fff', fontWeight:600, fontSize:'1.1rem', border:'none', borderRadius:'8px', padding:'12px 32px', cursor:'pointer', boxShadow:'0 1px 6px #0002', transition:'background 0.2s', textDecoration:'none', display:'inline-block'}}
+          >
+            Przejdź do formularza rejestracyjnego
+          </a>
+        </section>
+      )}
 
       {/* History Section */}
       <section className="section" id="historia">
