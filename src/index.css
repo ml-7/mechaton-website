@@ -1,9 +1,7 @@
 /* Custom audio player for Mechaton Editions */
 .mechaton-audio-block {
     margin-top: 18px;
-    background: #fff;
     border-radius: 18px;
-    box-shadow: 0 2px 12px #0001;
     padding: 0;
     width: 100%;
     max-width: 100%;
