@@ -1,3 +1,46 @@
+/* Custom audio player for Mechaton Editions */
+.mechaton-audio-block {
+    margin-top: 18px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px #0001;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.mechaton-audio-label {
+    font-weight: 700;
+    color: #630102;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+.mechaton-audio {
+    width: 100%;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 1px 6px #0001;
+    outline: none;
+    padding: 2px 0;
+    accent-color: #888888;
+}
+audio.mechaton-audio::-webkit-media-controls-panel {
+    background: #fff;
+    border-radius: 12px;
+}
+audio.mechaton-audio::-webkit-media-controls-play-button,
+audio.mechaton-audio::-webkit-media-controls-timeline,
+audio.mechaton-audio::-webkit-media-controls-volume-slider {
+    border-radius: 8px;
+    background: #fff;
+    filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(90%);
+}
+audio.mechaton-audio::-webkit-media-controls-current-time-display,
+audio.mechaton-audio::-webkit-media-controls-time-remaining-display {
+    color: #888888;
+}
 @media (max-width: 600px) {
     .footer-red-line,
     .footer .footer-red-line,
