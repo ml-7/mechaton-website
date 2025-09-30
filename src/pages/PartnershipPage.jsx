@@ -373,7 +373,7 @@ const PartnershipPage = () => {
         </div>
         <div className="container">
           <div className="section-title">
-            <h2>Dlaczego warto współpracować z Mechatonem?</h2>
+            <h2>Dlaczego warto współtworzyć Mechaton?</h2>
           </div>
           <div className="partnership-box" id="partnership-box-1">
             <div className="partnership-content">
@@ -396,8 +396,8 @@ const PartnershipPage = () => {
               </div>
               <div className="partnership-text">
                 <h3>Współpraca międzyuczelniana</h3>
-                <p>MECHATON to platforma, która łączy środowiska akademickie różnych uczelni. Współpraca międzyuczelniana pozwala na wymianę doświadczeń, transfer wiedzy oraz tworzenie interdyscyplinarnych zespołów studenckich.</p>
-                <p>Zapraszamy uczelnie techniczne do nawiązania partnerstwa, które wzbogaci ofertę dydaktyczną i otworzy nowe możliwości dla studentów. Wspólnie możemy realizować projekty badawcze, organizować warsztaty i tworzyć nowoczesne programy edukacyjne.</p>
+                <p>MECHATON to konkurs inżynierski, który stawia przed studentami realne wyzwania technologiczne. Aby poszerzyć jego zasięg i umożliwić rywalizację talentom z całej Polski, zapraszamy uczelnie techniczne do nawiązania oficjalnej współpracy partnerskiej.</p>
+                <p>Partnerstwo z Mechatonem to dla Państwa uczelni doskonała okazja do promocji, wzbogacenia oferty dydaktycznej oraz, co najważniejsze, umożliwienia swoim studentom wystawienia drużyn w konkursie. Wspólnie dajmy młodym inżynierom platformę do rozwoju i zaprezentowania swoich umiejętności.</p>
                 <a href="#" className="btn" onClick={e => { e.preventDefault(); document.getElementById('formularz-kontaktowy')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>Nawiąż współpracę</a>
               </div>
             </div>
@@ -429,13 +429,13 @@ const PartnershipPage = () => {
             <div className="benefit-card">
               <div className="benefit-icon"></div>
               <h3>Dla uczelni</h3>
-              <p>Współpraca międzyuczelniana w ramach konkursu MECHATON przynosi korzyści edukacyjne i badawcze.</p>
+              <p>Nawiązanie współpracy w ramach konkursu MECHATON oferuje uczelniom wymierne korzyści w obszarze dydaktycznym i wizerunkowym.</p>
               <ul>
-                <li>Wzbogacenie oferty dydaktycznej</li>
-                <li>Wymiana doświadczeń i transfer wiedzy</li>
-                <li>Wspólne projekty badawcze</li>
-                <li>Promocja uczelni wśród kandydatów na studia</li>
-                <li>Dostęp do nowoczesnych technologii</li>
+                <li>Gwarancja udziału studentów w konkursie</li>
+                <li>Wzrost renomy i promocja uczelni</li>
+                <li>Praktyczny wymiar kształcenia</li>
+                <li>Networking z liderami przemysłu</li>
+                <li>Wymiana doświadczeń</li>
               </ul>
             </div>
 

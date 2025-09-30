@@ -14,6 +14,7 @@ const Footer = () => (
           <ul className="footer-links">
             <li><a href="/edycje">Edycje</a></li>
             <li><a href="/wspolpraca">Współpraca</a></li>
+            <li><a href="/o-nas">Inni o nas</a></li>
             <li><a href="../src/assets/regulamin/REGULAMIN_MECHATON.pdf" target="_blank" rel="noopener noreferrer">Regulamin</a></li>
           </ul>
         </div>
