@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 import IndustryPng from '../assets/Industry.png';
 import IntercollegiatePng from '../assets/Intercollegiate.png';
-import MentoringPng from '../assets/Mentoring.png';
+// import MentoringPng from '../assets/Mentoring.png';
 import RoverPng from '../assets/Rover.png';
 import SatelliteRobot from '../assets/Space-satelite-robot.png';
 import SatellitePng from '../assets/Satellite.png';
@@ -350,12 +350,7 @@ const PartnershipPage = () => {
               <p>Dołącz do sieci uczelni partnerskich, umożliw swoim studentom udział w konkursie wzbogacając ofertę edukacyjną o praktyczne doświadczenia.</p>
               <a href="#" className="btn" onClick={e => { e.preventDefault(); document.getElementById('formularz-kontaktowy')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>Nawiąż współpracę</a>
             </div>
-            <div className="partnership-card">
-              <div className="partnership-icon"></div>
-              <h3>Dla mentorów</h3>
-              <p>Podziel się swoją wiedzą i doświadczeniem jako mentor. Wspieraj rozwój młodych talentów i bądź częścią inspirującej społeczności.</p>
-              <a href="#" className="btn" onClick={e => { e.preventDefault(); document.getElementById('formularz-kontaktowy')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>Zostań mentorem</a>
-            </div>
+
           </div>
         </div>
       </section>
@@ -408,19 +403,7 @@ const PartnershipPage = () => {
             </div>
           </div>
           
-          <div className="partnership-box" id="partnership-box-3">
-            <div className="partnership-content">
-              <div className="partnership-text">
-                <h3>Mentoring podczas wydarzenia</h3>
-                <p>MECHATON to nie tylko konkurs, ale również czas na rozwój, który daje szanse połączyć doświadczonych specjalistów z młodymi pasjonatami inżynierii. Mentorom oferujemy możliwość dzielenia się wiedzą, doświadczeniem oraz wpływania na rozwój przyszłych kadr technicznych.</p>
-                <p>Jeśli jesteś ekspertem w dziedzinie mechaniki, automatyki, elektroniki lub pokrewnych dziedzin, zapraszamy do udziału. Twoje doświadczenie może inspirować i wspierać młode talenty.</p>
-                <a href="#" className="btn" onClick={e => { e.preventDefault(); document.getElementById('formularz-kontaktowy')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>Zostań mentorem</a>
-              </div>
-              <div className="partnership-image">
-                <img src={MentoringPng} alt="Mentoring podczas wydarzenia" />
-              </div>
-            </div>
-          </div>
+
         </div>
       </section>
 
@@ -455,17 +438,7 @@ const PartnershipPage = () => {
                 <li>Dostęp do nowoczesnych technologii</li>
               </ul>
             </div>
-            <div className="benefit-card">
-              <div className="benefit-icon"></div>
-              <h3>Dla mentorów</h3>
-              <p>Udział w mentoringu podczas konkursu MECHATON to rozwój zawodowy i satysfakcja z dzielenia się wiedzą.</p>
-              <ul>
-                <li>Rozwój umiejętności przywódczych</li>
-                <li>Satysfakcja z wpływu na rozwój młodych talentów</li>
-                <li>Nawiązywanie kontaktów branżowych</li>
-                <li>Aktualizacja wiedzy w kontakcie z innowacyjnymi projektami</li>
-              </ul>
-            </div>
+
           </div>
         </div>
         <div style={{
@@ -559,7 +532,7 @@ const PartnershipPage = () => {
                   <option value="">Wybierz rodzaj współpracy</option>
                   <option value="company">Partnerstwo biznesowe</option>
                   <option value="university">Współpraca międzyuczelniana</option>
-                  <option value="mentor">Mentoring podczas wydarzenia</option>
+
                   <option value="other">Inne</option>
                 </select>
               </div>

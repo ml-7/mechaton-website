@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect, useState } from 'react';
-import RegistrationForm from '../components/RegistrationForm';
+// import RegistrationForm from '../components/RegistrationForm';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ContactWidget from '../components/ContactWidget';
@@ -14,7 +14,7 @@ const HomePage = () => {
   const [titleText, setTitleText] = useState('');
   const [descriptionText, setDescriptionText] = useState('');
   const [showButton, setShowButton] = useState(false);
-  const [formOpen, setFormOpen] = useState(false);
+
   
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -439,15 +439,14 @@ const HomePage = () => {
       <section className="upcoming-edition-callout" style={{background:'#fff', boxShadow:'0 2px 12px #0001', margin:'48px auto 0 auto', maxWidth:'1000px', width:'100%', padding:'32px 24px', display:'flex', flexDirection:'column', alignItems:'center', gap:'18px', justifyContent:'center'}}>
         <div style={{fontSize:'1.5rem', fontWeight:700, color:'#630102', textAlign:'center'}}>Nadchodzi nowa edycja Mechaton!</div>
         <div style={{fontSize:'1.1rem', color:'#222', textAlign:'center', marginBottom:'8px'}}>Zgłoś swój zespół do udziału w najbliższej edycji konkursu Mechaton.<br/>Nie przegap szansy na udział!</div>
-        <button
-          style={{background:'#630102', color:'#fff', fontWeight:600, fontSize:'1.1rem', border:'none', borderRadius:'8px', padding:'12px 32px', cursor:'pointer', boxShadow:'0 1px 6px #0002', transition:'background 0.2s'}}
-          onMouseOver={e => e.currentTarget.style.background='#8a1a1a'}
-          onMouseOut={e => e.currentTarget.style.background='#630102'}
-          onClick={() => setFormOpen(true)}
+        <a
+          href="https://forms.gle/your-form-link" // TODO: replace with actual registration link
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{background:'#630102', color:'#fff', fontWeight:600, fontSize:'1.1rem', border:'none', borderRadius:'8px', padding:'12px 32px', cursor:'pointer', boxShadow:'0 1px 6px #0002', transition:'background 0.2s', textDecoration:'none', display:'inline-block'}}
         >
-          Zarejestruj zespół
-        </button>
-        <RegistrationForm open={formOpen} onClose={() => setFormOpen(false)} />
+          Przejdź do formularza rejestracyjnego
+        </a>
       </section>
 
       {/* History Section */}
