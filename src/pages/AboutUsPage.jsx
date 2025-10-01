@@ -85,14 +85,16 @@ function LinkSwitcher({ current, setCurrent }) {
           {displayed}
           <span className="blinking-cursor" style={{
             display: 'inline-block',
-            width: '0ch',
-            marginLeft: '0px',
-            background: 'none',
-            color: '#630102',
+            width: '2px',
+            height: '1.3em',
+            marginLeft: '2px',
+            background: '#630102',
+            color: 'transparent',
             fontWeight: 'bold',
-            fontSize: '1.6rem',
+            fontSize: '1.1rem',
             verticalAlign: 'middle',
             userSelect: 'none',
+            borderRadius: '1px',
           }}>
             |
           </span>
