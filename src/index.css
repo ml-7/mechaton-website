@@ -656,7 +656,7 @@ body.partnership-bg {
 }
 
 /* About Section Layout with Interactive Grid Overlay - PEŁNA SZEROKOŚĆ */
-#o-nas {
+#inni-o-nas {
     width: 100vw; /* Pełna szerokość viewport */
     margin-left: calc(-50vw + 50%); /* Wyciągnij poza container */
     padding: 0; /* Bez paddingu */

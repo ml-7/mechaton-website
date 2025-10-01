@@ -368,7 +368,7 @@ const HomePage = () => {
                 {!showIntro ? descriptionText : ''}
               </p>
               <button 
-                onClick={() => scrollToSection('o-nas')} 
+                onClick={() => scrollToSection('inni-o-nas')} 
                 className="btn btn-outline btn-red-outline"
                 style={{ 
                   cursor: 'pointer',
@@ -384,7 +384,7 @@ const HomePage = () => {
       </section>
 
       {/* About Section */}
-      <section className="section" id="o-nas">
+  <section className="section" id="inni-o-nas">
         <div className="container">
           <div className="about-section-interactive">
             {/* Animated Grid - teraz pokrywa całą sekcję */}

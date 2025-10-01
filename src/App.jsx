@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
 import AboutUsPage from './pages/AboutUsPage';
 
 import PartnershipPage from './pages/PartnershipPage';
@@ -27,8 +26,7 @@ const App = () => {
     <Router>
       <Routes>
     <Route path="/" element={<HomePage />} />
-    <Route path="/o-mechatonie" element={<AboutPage />} />
-    <Route path="/o-nas" element={<AboutUsPage />} />
+    <Route path="/inni-o-nas" element={<AboutUsPage />} />
 
     <Route path="/edycje" element={<BasicEditionsPage />} />
     <Route path="/wspolpraca" element={<PartnershipPage />} />
