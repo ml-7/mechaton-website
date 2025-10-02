@@ -4,6 +4,7 @@ import mechaton3Voice from '../assets/mechaton3.mp3';
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import CustomAudioPlayer from '../components/CustomAudioPlayer';
 import commonLogo from '../assets/COMMON.jpg';
 import secowarwickLogo from '../assets/SECOWARWICK.jpg';
 import veoliaLogo from '../assets/VEOLIA.jpg';
@@ -86,13 +87,10 @@ const BasicEditionsPage = () => (
                 </div>
               </div>
               {/* Voice recording for Mechaton 3 */}
-              <div className="mechaton-audio-block">
-                <div className="mechaton-audio-label">Audycja Radia ŻAK z III edycji:</div>
-                <audio controls className="mechaton-audio">
-                  <source src={mechaton3Voice} type="audio/mp3" />
-                  Twoja przeglądarka nie obsługuje odtwarzacza audio.
-                </audio>
-              </div>
+              <CustomAudioPlayer 
+                src={mechaton3Voice} 
+                label="Audycja Radia ŻAK z III edycji:" 
+              />
             </div>
           </div>
 
@@ -166,13 +164,10 @@ const BasicEditionsPage = () => (
                 </div>
               </div>
               {/* Voice recording for Mechaton 2 */}
-              <div className="mechaton-audio-block">
-                <div className="mechaton-audio-label">Audycja Radia ŻAK z II edycji:</div>
-                <audio controls className="mechaton-audio">
-                  <source src={mechaton2Voice} type="audio/wav" />
-                  Twoja przeglądarka nie obsługuje odtwarzacza audio.
-                </audio>
-              </div>
+              <CustomAudioPlayer 
+                src={mechaton2Voice} 
+                label="Audycja Radia ŻAK z II edycji:" 
+              />
             </div>
           </div>
 
