@@ -1,10 +1,15 @@
 import React from 'react';
-
+import politechnikaLogo from '../assets/Politechnika_Lodzka_biale_logo.png';
 
 const Footer = () => (
   <footer className="footer" id="kontakt">
     <div className="container">
       <div className="footer-grid">
+        <div className="footer-column logo-column">
+          <a href="https://p.lodz.pl/" target="_blank" rel="noopener noreferrer" className="logo-link">
+            <img src={politechnikaLogo} alt="Politechnika Łódzka" style={{ height: '120px', width: 'auto', objectFit: 'contain' }} />
+          </a>
+        </div>
         <div className="footer-column">
           <h3>MECHATON</h3>
           <p>Konkurs inżynierski Wydziału Mechanicznego Politechniki Łódzkiej.</p>

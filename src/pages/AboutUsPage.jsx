@@ -8,6 +8,7 @@ import "../index.css";
 
 const iframeLinks = [
   "https://www.energiadlalodzi.pl/tag/mechaton/",
+  "https://technikum.io/mechaton/",
   "https://www.lodzkie.pl/strona-glowna/aktualnosci/mechaton,-czyli-budowanie-mostów-między-nauką-i-przemysłem",
   "https://mlodziwlodzi.pl/minimechaton-dla-uczniow-na-wydziale-mechanicznym-pl/",
   "https://zsp9.pl/26288-2/"
@@ -68,14 +69,14 @@ function LinkSwitcher({ current, setCurrent }) {
   }
 
   return (
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '2.5rem', gap: '1.5rem', minHeight: '3.5rem' }}>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '2.5rem', gap: '1.5rem', minHeight: '3.5rem', position: 'relative', zIndex: 1000 }}>
       <button
         aria-label="Poprzedni link"
         onClick={() => handleArrow('left')}
-        style={{ fontSize: '2.2rem', background: 'none', border: 'none', cursor: 'pointer', color: '#630102', fontWeight: 'bold', textShadow: '0 2px 8px #e5393533', padding: '0 0.7rem', transition: 'color 0.2s' }}
+        style={{ fontSize: '2.2rem', background: 'none', border: 'none', cursor: 'pointer', color: '#630102', fontWeight: 'bold', textShadow: '0 2px 8px #e5393533', padding: '0 0.7rem', transition: 'color 0.2s', position: 'relative', zIndex: 1001, pointerEvents: 'auto' }}
         disabled={animating}
       >
-        &#8592;
+  ◀
       </button>
       <div style={{ display: 'flex', alignItems: 'center', background: '#f5f5f5', borderRadius: '2rem', boxShadow: '0 2px 12px #0001', padding: '0.7rem 1.5rem', minWidth: '260px', gap: '0.7rem' }}>
         <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#888', fontSize: '1.2rem' }}>
@@ -103,10 +104,10 @@ function LinkSwitcher({ current, setCurrent }) {
       <button
         aria-label="Następny link"
         onClick={() => handleArrow('right')}
-        style={{ fontSize: '2.2rem', background: 'none', border: 'none', cursor: 'pointer', color: '#630102', fontWeight: 'bold', textShadow: '0 2px 8px #e5393533', padding: '0 0.7rem', transition: 'color 0.2s' }}
+        style={{ fontSize: '2.2rem', background: 'none', border: 'none', cursor: 'pointer', color: '#630102', fontWeight: 'bold', textShadow: '0 2px 8px #e5393533', padding: '0 0.7rem', transition: 'color 0.2s', position: 'relative', zIndex: 1001, pointerEvents: 'auto' }}
         disabled={animating}
       >
-        &#8594;
+  ▶
       </button>
     </div>
   );
@@ -120,10 +121,10 @@ const AboutUsPage = () => {
         @keyframes blink-cursor { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
         .blinking-cursor { animation: blink-cursor 1s steps(1) infinite; }
       `}</style>
-      <Header />
-      <div className="about-us-page" style={{ marginTop: '6rem' }}>
+  <Header pushDown />
+      <div className="about-us-page" style={{ marginTop: '20px' }}>
         <LinkSwitcher current={current} setCurrent={setCurrent} />
-        <div className="responsive-iframe-container" style={{position: 'relative', width: '90%', margin: '0 auto 2rem auto', paddingBottom: '56.25%', height: 0, boxShadow: '0 6px 32px 0 #0002, 0 1.5px 8px 0 #0001', borderRadius: '1.2rem', overflow: 'hidden'}}>
+        <div className="responsive-iframe-container" style={{position: 'relative' , width: '90%', margin: '0 auto 2rem auto', paddingBottom: '45%', height: 0, boxShadow: '0 6px 32px 0 #0002, 0 1.5px 8px 0 #0001', borderRadius: '1.2rem', overflow: 'hidden'}}>
           <iframe
             src={iframeLinks[current]}
             title="Inni o nas - artykuł"

@@ -13,14 +13,14 @@ import veoliaMechaton from '../assets/veolia-mechaton.jpg';
 
 const BasicEditionsPage = () => (
   <>
-    <Header />
-    <main style={{ minHeight: '60vh', background: '#ffffffff', position: 'relative', left: '-30px' }}>
-      <section className="section" style={{display:'flex', flexDirection:'column', alignItems:'center', marginBottom:'64px', width:'100%'}}>
+  <Header pushDown />
+    <main style={{ minHeight: 'auto', background: '#ffffffff', position: 'relative', left: '-30px', paddingTop: '0px', zIndex: 1 }}>
+      <section className="section" style={{display:'flex', flexDirection:'column', alignItems:'center', marginBottom:'60px', width:'100%', paddingTop: '0'}}>
         {/* III edycja - COMMON S.A. */}
         <div className="edition-card" style={{width:'100%', maxWidth:'1200px'}}>
             <div className="edition-image" style={{background:'#fff', display:'flex', alignItems:'center', justifyContent:'center', padding:'0 1em', height:'300px'}}>
               <div style={{flex:'1 1 0', display:'flex', alignItems:'center', justifyContent:'center', height:'100%'}}>
-                <img src={commonLogo} alt="COMMON S.A. logo" style={{maxHeight:'200px', maxWidth:'95%', objectFit:'contain', background:'#fff', borderRadius:'12px', boxShadow:'none'}} />
+                <img src={commonLogo} alt="COMMON S.A. logo" style={{maxHeight:'100px', maxWidth:'95%', objectFit:'contain', background:'#fff', borderRadius:'12px', boxShadow:'none'}} />
               </div>
               <div style={{flex:'1 1 0', display:'flex', alignItems:'center', justifyContent:'center', height:'100%'}}>
                 <img src={commonMechaton} alt="III edycja - COMMON S.A." style={{maxHeight:'260px', maxWidth:'95%', objectFit:'contain', borderRadius:'12px', background:'#f5f5f5'}} />
@@ -240,7 +240,9 @@ const BasicEditionsPage = () => (
           </div>
       </section>
     </main>
-    <Footer />
+    <div style={{ position: 'relative', zIndex: 10, marginTop: '-100px' }}>
+      <Footer />
+    </div>
   </>
 );
 

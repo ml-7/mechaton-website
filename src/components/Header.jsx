@@ -4,7 +4,7 @@ import './Header.css';
 import regulaminPdf from '../assets/regulamin/REGULAMIN_MECHATON.pdf';
 import mechatonLogo from '../assets/Mechaton-removebg.png';
 
-const Header = ({ blackOut }) => {
+const Header = ({ blackOut, pushDown }) => {
   const location = useLocation();
   const [isVisible, setIsVisible] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,7 +18,7 @@ const Header = ({ blackOut }) => {
     }
     const handleMouseMove = (e) => {
       const mouseY = e.clientY;
-      if (mouseY <= 80) {
+      if (mouseY <= 30) {
         setIsVisible(true);
       } else if (mouseY > 150 && !e.target.closest('header')) {
         setIsVisible(false);
@@ -43,7 +43,20 @@ const Header = ({ blackOut }) => {
   return (
     <>
       <div className="header-trigger"></div>
-      <header className={isVisible ? `show${blackOut ? ' header-blackout' : ''}` : blackOut ? 'header-blackout' : ''}>
+      <header
+        className={
+          (isVisible ? `show` : '') +
+          (blackOut ? ' header-blackout' : '') +
+          (pushDown ? ' header-pushdown' : '')
+        }
+        style={pushDown ? {
+          transition: 'height 0.3s cubic-bezier(.4,0,.2,1), opacity 0.3s cubic-bezier(.4,0,.2,1)',
+          height: isVisible ? '90px' : '0px',
+          opacity: isVisible ? 1 : 0,
+          overflow: 'hidden',
+          position: 'relative',
+        } : {}}
+      >
         <div className="container">
           <nav>
             <div className="logo-container">
