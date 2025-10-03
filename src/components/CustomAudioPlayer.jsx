@@ -11,7 +11,6 @@ const CustomAudioPlayer = ({ src, label }) => {
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
   const [isMuted, setIsMuted] = useState(false);
-  const [showVolumeSlider, setShowVolumeSlider] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [playbackRate, setPlaybackRate] = useState(1);
   const audioRef = useRef(null);
@@ -168,7 +167,6 @@ const CustomAudioPlayer = ({ src, label }) => {
             <button 
               className="volume-btn"
               onClick={toggleMute}
-              onMouseEnter={() => setShowVolumeSlider(true)}
             >
               <img 
                 src={getVolumeIcon()} 
@@ -177,19 +175,22 @@ const CustomAudioPlayer = ({ src, label }) => {
               />
             </button>
             
-            <div 
-              className={`volume-slider-container ${showVolumeSlider ? 'show' : ''}`}
-              onMouseEnter={() => setShowVolumeSlider(true)}
-              onMouseLeave={() => setShowVolumeSlider(false)}
-            >
-              <input
-                type="range"
-                className="volume-slider"
-                min="0"
-                max="100"
-                value={isMuted ? 0 : volume * 100}
-                onChange={handleVolumeChange}
-              />
+            <div className="volume-slider-container">
+              <div className="volume-slider-wrapper">
+                <div className="volume-slider-track"></div>
+                <div 
+                  className="volume-slider-fill" 
+                  style={{ width: `${isMuted ? 0 : volume * 100}%` }}
+                ></div>
+                <input
+                  type="range"
+                  className="volume-slider"
+                  min="0"
+                  max="100"
+                  value={isMuted ? 0 : volume * 100}
+                  onChange={handleVolumeChange}
+                />
+              </div>
             </div>
           </div>
         </div>
