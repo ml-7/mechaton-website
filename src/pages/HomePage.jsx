@@ -6,6 +6,7 @@ import ContactWidget from '../components/ContactWidget';
 import veoLiaLogo from '../assets/VEOLIA.jpg';
 import secoWarwickLogo from '../assets/SECOWARWICK.jpg';
 import commonLogo from '../assets/COMMON.jpg';
+import hitachiLogo from '../assets/HITACHI.jpg';
 import mechatonLogo from '../assets/Mechaton-removebg.png';
 import mechatonDefaultLogo from '../assets/Mechaton_default.png';
 
@@ -459,6 +460,22 @@ const HomePage = () => {
             <h2>Historia Mechatonu</h2>
           </div>
           <div className="timeline">
+            <div className="timeline-item">
+              <div className="timeline-content">
+                <div className="timeline-year hide-on-mobile">2025</div>
+                <div className="partner-logo hitachi-logo">
+                  <a href="https://www.hitachi.com/pl-pl/" target="_blank" rel="noopener noreferrer">
+                    <img src={hitachiLogo} alt="Hitachi Logo" />
+                  </a>
+                </div>
+                <h3 className="hide-on-mobile">
+                  <a href="https://www.hitachi.com/pl-pl/" target="_blank" rel="noopener noreferrer">
+                    HITACHI
+                  </a>
+                </h3>
+                <p className="hide-on-mobile">Japoński koncern technologiczny działający w ponad 100 krajach świata, specjalizujący się w rozwiązaniach z zakresu energetyki, automatyki przemysłowej, systemów transportowych oraz technologii informatycznych. Łączy zaawansowane innowacje z ideą zrównoważonego rozwoju.</p>
+              </div>
+            </div>
             <div className="timeline-item">
               <div className="timeline-content">
                 <div className="timeline-year hide-on-mobile">12.2024</div>

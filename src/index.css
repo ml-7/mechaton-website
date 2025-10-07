@@ -1682,6 +1682,10 @@ body.partnership-bg {
     transform: scale(0.89) !important;
 }
 
+.hitachi-logo img:hover {
+    transform: scale(0.79) !important;
+}
+
 /* Partner links styling */
 .partner-logo a {
     display: inline-block;
@@ -1706,6 +1710,10 @@ body.partnership-bg {
 
 .common-logo img {
     transform: scale(0.85) !important;
+}
+
+.hitachi-logo img {
+    transform: scale(0.75) !important;
 }
 
 /* Testimonials */
