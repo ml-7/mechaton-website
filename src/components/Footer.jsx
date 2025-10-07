@@ -1,5 +1,6 @@
 import React from 'react';
 import politechnikaLogo from '../assets/Politechnika_Lodzka_biale_logo.png';
+import mechanicalFacultyLogo from '../assets/Logo_WM_bordowe.png';
 
 const Footer = () => (
   <footer className="footer" id="kontakt">
@@ -12,7 +13,27 @@ const Footer = () => (
         </div>
         <div className="footer-column">
           <h3>MECHATON</h3>
-          <p>Konkurs inżynierski Wydziału Mechanicznego Politechniki Łódzkiej.</p>
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px' }}>
+            <p style={{ flex: '1', margin: '0' }}>Konkurs inżynierski Wydziału Mechanicznego Politechniki Łódzkiej.</p>
+            <div className="mechanical-faculty-logo" style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              marginTop: '-55px',
+            }}>
+              <a href="https://mechaniczny.p.lodz.pl/" target="_blank" rel="noopener noreferrer" className="logo-link">
+                <img 
+                  src={mechanicalFacultyLogo} 
+                  alt="Wydział Mechaniczny" 
+                  style={{ 
+                    height: '180px', 
+                    width: 'auto', 
+                    objectFit: 'contain',
+                    filter: 'brightness(0) invert(1)'
+                  }} 
+                />
+              </a>
+            </div>
+          </div>
         </div>
         <div className="footer-column">
           <h3>Nawigacja</h3>
