@@ -2149,6 +2149,71 @@ body.partnership-bg {
         left: 50%;
         transform: translateX(-50%);
     }
+    
+    .footer {
+        padding: 40px 0 20px;
+    }
+    
+    .footer .container {
+        max-width: 95%;
+        padding: 0 20px;
+    }
+    
+    .footer-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-column {
+        text-align: center;
+    }
+    
+    .footer-column.logo-column {
+        order: 1;
+    }
+    
+    .footer-column:nth-child(2) { /* MECHATON column */
+        order: 2;
+    }
+    
+    .footer-column:nth-child(3) { /* Navigation */
+        order: 3;
+    }
+    
+    .footer-column:nth-child(4) { /* Contact */
+        order: 4;
+    }
+    
+    .footer-column:nth-child(5) { /* Social */
+        order: 5;
+    }
+    
+    /* Fix mechanical faculty logo on mobile */
+    .footer-column:nth-child(2) div {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+    }
+    
+    .mechanical-faculty-logo {
+        margin-top: 0 !important;
+    }
+    
+    .mechanical-faculty-logo img {
+        height: 120px !important;
+    }
+    
+    .copyright {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+        padding: 20px 20px 0 20px !important;
+        text-align: center !important;
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
 }
 
 .footer-links {
