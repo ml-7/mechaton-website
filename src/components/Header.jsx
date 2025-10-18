@@ -4,29 +4,45 @@ import './Header.css';
 import regulaminPdf from '../assets/regulamin/REGULAMIN_MECHATON.pdf';
 import mechatonLogo from '../assets/Mechaton-removebg.png';
 
-const Header = ({ blackOut, pushDown }) => {
+const Header = ({ blackOut, hoverMode, alwaysShow }) => {
   const location = useLocation();
-  const [isVisible, setIsVisible] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Always show navbar on mobile
+    // If alwaysShow is true, always keep visible
+    if (alwaysShow) {
+      setIsVisible(true);
+      return;
+    }
+
+    // If not in hover mode, always show
+    if (!hoverMode) {
+      setIsVisible(true);
+      return;
+    }
+
+    // Hover mode logic (only for HomePage during first 20 seconds)
     const checkMobile = () => window.innerWidth <= 600;
     if (checkMobile()) {
       setIsVisible(true);
       return;
     }
+
+    // Start with navbar hidden in hover mode
+    setIsVisible(false);
+
     const handleMouseMove = (e) => {
       const mouseY = e.clientY;
-      if (mouseY <= 30) {
+      if (mouseY <= 500) {
         setIsVisible(true);
-      } else if (mouseY > 150 && !e.target.closest('header')) {
+      } else if (mouseY > 500 && !e.target.closest('header')) {
         setIsVisible(false);
       }
     };
 
     const handleMouseLeave = (e) => {
-      if (e.clientY > 150) {
+      if (e.clientY > 500) {
         setIsVisible(false);
       }
     };
@@ -38,24 +54,12 @@ const Header = ({ blackOut, pushDown }) => {
       window.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, []);
+  }, [hoverMode, alwaysShow]);
 
   return (
     <>
-      <div className="header-trigger"></div>
       <header
-        className={
-          (isVisible ? `show` : '') +
-          (blackOut ? ' header-blackout' : '') +
-          (pushDown ? ' header-pushdown' : '')
-        }
-        style={pushDown ? {
-          transition: 'height 0.3s cubic-bezier(.4,0,.2,1), opacity 0.3s cubic-bezier(.4,0,.2,1)',
-          height: isVisible ? '90px' : '0px',
-          opacity: isVisible ? 1 : 0,
-          overflow: 'hidden',
-          position: 'relative',
-        } : {}}
+        className={`${isVisible ? 'show' : ''}${blackOut ? ' header-blackout' : ''}`}
       >
         <div className="container">
           <nav>

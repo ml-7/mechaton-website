@@ -14,8 +14,8 @@ import veoliaMechaton from '../assets/veolia-mechaton.jpg';
 
 const BasicEditionsPage = () => (
   <>
-  <Header pushDown />
-    <main style={{ minHeight: 'auto', background: '#ffffffff', position: 'relative', left: '-30px', paddingTop: '0px', zIndex: 1 }}>
+  <Header />
+    <main style={{ minHeight: 'auto', background: '#ffffffff', position: 'relative', left: '-30px', paddingTop: '90px', zIndex: 1 }}>
       <section className="section" style={{display:'flex', flexDirection:'column', alignItems:'center', marginBottom:'60px', width:'100%', paddingTop: '0'}}>
         {/* III edycja - COMMON S.A. */}
         <div className="edition-card" style={{width:'100%', maxWidth:'1200px'}}>

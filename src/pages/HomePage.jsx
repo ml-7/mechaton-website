@@ -15,6 +15,7 @@ const HomePage = () => {
   const [titleText, setTitleText] = useState('');
   const [descriptionText, setDescriptionText] = useState('');
   const [showButton, setShowButton] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(false);
 
   
   const scrollToSection = (sectionId) => {
@@ -224,7 +225,15 @@ const HomePage = () => {
       startTextAnimation();
     }, 10000);
 
-    return () => clearTimeout(loadingTimer);
+    // Pokaż navbar permanentnie po 20 sekundach
+    const navbarTimer = setTimeout(() => {
+      setShowNavbar(true);
+    }, 20000);
+
+    return () => {
+      clearTimeout(loadingTimer);
+      clearTimeout(navbarTimer);
+    };
   }, []);
 
   const startTextAnimation = () => {
@@ -323,7 +332,7 @@ const HomePage = () => {
         <img src={mechatonDefaultLogo} alt="Mechaton Logo" className="intro-logo" />
       </div>
     )}
-    <Header />
+    <Header hoverMode={!showNavbar} alwaysShow={showNavbar} />
     <main>
       {/* Hero Section */}
       <section className="hero">
