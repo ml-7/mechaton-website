@@ -1816,7 +1816,7 @@ body.partnership-bg {
 /* Scroll Indicators */
 .scroll-indicators {
     position: absolute;
-    top: 0;
+    top: 45px;
     bottom: 0;
     z-index: 10;
     display: flex;
@@ -1955,7 +1955,7 @@ body.partnership-bg {
 
 .partnership-earth-background {
     position: absolute;
-    bottom: -1%; /* Przesunięty znacznie wyżej z -105% */
+    bottom: calc(-1% - 45px); /* Przesunięty 90px niżej */
     left: 46.5%;
     transform: translateX(-44%) scale(1.5);
     width: 100%;
