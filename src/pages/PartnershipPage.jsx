@@ -340,7 +340,7 @@ const PartnershipPage = () => {
             className="rover-appear"
             style={{
               position: 'absolute',
-              left: '18%',
+              left: 'calc(20% - 50px)',
               top: '40px',
               transform: 'translateX(-50%)',
               zIndex: 999,
