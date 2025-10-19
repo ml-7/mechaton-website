@@ -1064,6 +1064,7 @@ body.partnership-bg {
     color: #000000 !important; /* Czarny z !important */
     font-size: 4rem; /* Większa czcionka dla tytułu */
     margin: 0;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 1);
 }
 
 .about-section-interactive .section-title h2::after {
@@ -1136,7 +1137,7 @@ body.partnership-bg {
     justify-content: center;
     min-height: 500px; /* Większa wysokość żeby tekst był niżej */
     pointer-events: none; /* Pozwala na kliknięcia przez tekst do siatki */
-    padding-bottom: 7rem; /* Więcej miejsca na dole */
+    padding-bottom: 4rem; /* Więcej miejsca na dole - tekst jeszcze niżej */
 }
 
 
@@ -1193,15 +1194,17 @@ body.partnership-bg {
     color: #000000; /* Czarny jak czarne kwadraciki */
     font-size: 1.8rem !important; /* Spójna z p */
     line-height: 1.5; /* Lepszy line-height */
-    font-weight: 400; /* Normalna czcionka bez pogrubienia */
+    font-weight: 700; /* Bold czcionka */
 }
 
 .about-content-hidden .about-text p {
     margin-bottom: 1.5rem;
-    font-weight: 400 !important; /* Normalna czcionka bez pogrubienia */
+    font-weight: 700 !important; /* Bold czcionka */
     color: #000000 !important; /* Czarny kolor z !important żeby nadpisać inne reguły */
     font-size: 1.8rem !important; /* Zmniejszona ale nadal większa czcionka */
     line-height: 1.5 !important; /* Lepszy line-height */
+    -webkit-text-stroke: 3px rgba(255, 255, 255, 1);
+    paint-order: stroke fill;
 }
 
 /* Responsive */
