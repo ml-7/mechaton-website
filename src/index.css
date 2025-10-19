@@ -497,6 +497,24 @@ audio.mechaton-audio::-webkit-media-controls-time-remaining-display {
                 .timeline .partner-logo.seco-logo img {
                     max-height: 22px !important;
                 }
+                .timeline .partner-logo.common-logo {
+                    height: 40px !important;
+                }
+                .timeline .partner-logo.common-logo img {
+                    max-height: 30.6px !important;
+                }
+                .timeline .partner-logo.hitachi-logo {
+                    height: 40px !important;
+                }
+                .timeline .partner-logo.hitachi-logo img {
+                    max-height: 27px !important;
+                }
+                .timeline .partner-logo.veolia-logo {
+                    height: 60px !important;
+                }
+                .timeline .partner-logo.veolia-logo img {
+                    max-height: 55px !important;
+                }
 }
 @media (max-width: 700px) {
     .timeline .partner-logo {

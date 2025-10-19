@@ -469,7 +469,7 @@ const HomePage = () => {
             <h2>Historia Mechatonu</h2>
           </div>
           <div className="timeline">
-            {/* Hitachi timeline item - hidden for now
+            {/* Hitachi timeline item - hidden for now */}
             <div className="timeline-item">
               <div className="timeline-content">
                 <div className="timeline-year hide-on-mobile">2025</div>
@@ -486,7 +486,6 @@ const HomePage = () => {
                 <p className="hide-on-mobile">Japoński koncern technologiczny działający w ponad 100 krajach świata, specjalizujący się w rozwiązaniach z zakresu energetyki, automatyki przemysłowej, systemów transportowych oraz technologii informatycznych. Łączy zaawansowane innowacje z ideą zrównoważonego rozwoju.</p>
               </div>
             </div>
-            */}
             <div className="timeline-item">
               <div className="timeline-content">
                 <div className="timeline-year hide-on-mobile">12.2024</div>
@@ -522,7 +521,7 @@ const HomePage = () => {
             <div className="timeline-item">
               <div className="timeline-content">
                 <div className="timeline-year hide-on-mobile">01.2023</div>
-                <div className="partner-logo">
+                <div className="partner-logo veolia-logo">
                   <a href="https://www.veolia.pl/" target="_blank" rel="noopener noreferrer">
                     <img src={veoLiaLogo} alt="VEOLIA Logo" />
                   </a>
