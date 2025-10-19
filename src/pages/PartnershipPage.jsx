@@ -244,23 +244,6 @@ const PartnershipPage = () => {
   <>
     <Header blackOut />
 
-    {/* Rover image centered in the page flow */}
-    <div
-      className="rover-appear"
-      style={{
-        position: 'absolute',
-        left: '17%',
-        top: '990px',
-        transform: 'translateX(-50%)',
-        zIndex: 999,
-        pointerEvents: 'none',
-        width: '320px',
-        maxWidth: '90vw',
-        opacity: 0.95
-      }}
-    >
-      <img src={RoverPng} alt="Rover" style={{ width: '100%', height: 'auto', display: 'block' }} />
-    </div>
     <main>
       {/* Page Header with Earth Background */}
       <section className="partnership-hero">
@@ -351,6 +334,22 @@ const PartnershipPage = () => {
               <a href="#" className="btn" onClick={e => { e.preventDefault(); document.getElementById('formularz-kontaktowy')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>Nawiąż współpracę</a>
             </div>
 
+          </div>
+          {/* Rover image positioned relative to partnership boxes */}
+          <div
+            className="rover-appear"
+            style={{
+              position: 'absolute',
+              left: '18%',
+              top: '40px',
+              transform: 'translateX(-50%)',
+              zIndex: 999,
+              pointerEvents: 'none',
+              width: '320px',
+              opacity: 0.95
+            }}
+          >
+            <img src={RoverPng} alt="Rover" style={{ width: '100%', height: 'auto', display: 'block' }} />
           </div>
         </div>
       </section>
