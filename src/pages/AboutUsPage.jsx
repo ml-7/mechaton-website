@@ -120,11 +120,26 @@ const AboutUsPage = () => {
       <style>{`
         @keyframes blink-cursor { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
         .blinking-cursor { animation: blink-cursor 1s steps(1) infinite; }
+        .responsive-iframe-container {
+          position: relative;
+          width: 90%;
+          margin: 0 auto 2rem auto;
+          padding-bottom: 45%;
+          height: 0;
+          box-shadow: 0 6px 32px 0 #0002, 0 1.5px 8px 0 #0001;
+          border-radius: 1.2rem;
+          overflow: hidden;
+        }
+        @media (max-width: 768px) {
+          .responsive-iframe-container {
+            padding-bottom: 120%;
+          }
+        }
       `}</style>
   <Header />
       <div className="about-us-page" style={{ marginTop: '110px' }}>
         <LinkSwitcher current={current} setCurrent={setCurrent} />
-        <div className="responsive-iframe-container" style={{position: 'relative' , width: '90%', margin: '0 auto 2rem auto', paddingBottom: '45%', height: 0, boxShadow: '0 6px 32px 0 #0002, 0 1.5px 8px 0 #0001', borderRadius: '1.2rem', overflow: 'hidden'}}>
+        <div className="responsive-iframe-container">
           <iframe
             src={iframeLinks[current]}
             title="Inni o nas - artykuł"
