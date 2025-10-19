@@ -69,11 +69,11 @@ function LinkSwitcher({ current, setCurrent }) {
   }
 
   return (
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '2.5rem', gap: '1.5rem', minHeight: '3.5rem', position: 'relative', zIndex: 1000 }}>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '2.5rem', gap: '1.5rem', minHeight: '3.5rem', position: 'relative', zIndex: 10 }}>
       <button
         aria-label="Poprzedni link"
         onClick={() => handleArrow('left')}
-        style={{ fontSize: '2.2rem', background: 'none', border: 'none', cursor: 'pointer', color: '#630102', fontWeight: 'bold', textShadow: '0 2px 8px #e5393533', padding: '0 0.7rem', transition: 'color 0.2s', position: 'relative', zIndex: 1001, pointerEvents: 'auto' }}
+        style={{ fontSize: '2.2rem', background: 'none', border: 'none', cursor: 'pointer', color: '#630102', fontWeight: 'bold', textShadow: '0 2px 8px #e5393533', padding: '0 0.7rem', transition: 'color 0.2s', position: 'relative', zIndex: 11, pointerEvents: 'auto' }}
         disabled={animating}
       >
   ◀
@@ -104,7 +104,7 @@ function LinkSwitcher({ current, setCurrent }) {
       <button
         aria-label="Następny link"
         onClick={() => handleArrow('right')}
-        style={{ fontSize: '2.2rem', background: 'none', border: 'none', cursor: 'pointer', color: '#630102', fontWeight: 'bold', textShadow: '0 2px 8px #e5393533', padding: '0 0.7rem', transition: 'color 0.2s', position: 'relative', zIndex: 1001, pointerEvents: 'auto' }}
+        style={{ fontSize: '2.2rem', background: 'none', border: 'none', cursor: 'pointer', color: '#630102', fontWeight: 'bold', textShadow: '0 2px 8px #e5393533', padding: '0 0.7rem', transition: 'color 0.2s', position: 'relative', zIndex: 11, pointerEvents: 'auto' }}
         disabled={animating}
       >
   ▶
