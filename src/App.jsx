@@ -23,7 +23,7 @@ function usePreventZoom() {
 const App = () => {
   usePreventZoom();
   return (
-    <Router>
+    <Router basename="/test">
       <Routes>
     <Route path="/" element={<HomePage />} />
     <Route path="/inni-o-nas" element={<AboutUsPage />} />
@@ -36,3 +36,4 @@ const App = () => {
 };
 
 export default App;
+
